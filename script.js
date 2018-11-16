@@ -69,14 +69,23 @@ function callback_rocket() {
 }
 
 function rocket2() {
+
     var x = Math.floor((Math.random() * 390) + 10);
 
-    $("#rocket").animate({
-        right : x ,
-        bottom: "500px"
-    }, 1800, callback_rocket);
+    $("#rocket2").animate({
+        left : "+700px",
+        top : x
+    }, 1800, callback_rocket2);
 };
-
+function callback_rocket2() {
+    var y2 = Math.floor((Math.random() * 390) + 10);
+    $("#rocket2").css({
+        left: "0px",
+        top: y2
+    });
+    test = true;
+    setTimeout(rocket2);
+}
 
 //
 var i = 0;

@@ -1,0 +1,53 @@
+body {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+nav {
+    min-height: 100px;
+}
+
+#principale {
+    position: relative;
+    margin: 0 auto;
+    height: 400px;
+    width: 600px;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+
+#nuage {
+    min-height: 400px;
+    width: 30000px;
+    position: absolute;
+    background-image: url(img/ciel.png)
+}
+
+#avion {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: 0.1s;
+}
+
+#rocket {
+    position: absolute;
+    top: 0px;
+    left: 700px;
+}
+
+#info {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: red;
+    font-size: 1.5em;
+    ;
+}
+
+.boom {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}

@@ -11,17 +11,18 @@ nav {
 #principale {
     position: relative;
     margin: 0 auto;
-    height: 400px;
-    width: 600px;
+    height: 600px;
+    width: 1000px;
     border: 1px solid blue;
-    overflow: hidden;
+    /* overflow: hidden; */
+    background-image: url(img/ciel.png);
+    background-size:cover;
 }
 
 #nuage {
     min-height: 400px;
     width: 30000px;
     position: absolute;
-    background-image: url(img/ciel.png)
 }
 
 #avion {
@@ -29,14 +30,19 @@ nav {
     left: 0px;
     top: 0px;
     transition: 0.1s;
+    width: 50px;
 }
 
 #rocket {
     position: absolute;
     top: 0px;
-    left: 700px;
+    left: 900px;
 }
-
+#rocket2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 #info {
     position: absolute;
     right: 10px;

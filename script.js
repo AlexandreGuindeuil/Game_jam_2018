@@ -1,20 +1,31 @@
 var test = true;
 
 $(document).keydown(function (e) {
-    var touche = e.which;
-    var avionY = parseInt($("#avion").css("top"));
-    switch (touche) {
-        case 38:
-            if (avionY >= 20) {
-                $("#avion").css('top', "-=20px");
-            }
-            break;
-        case 40:
-            if (avionY < 272) {
-                $("#avion").css('top', "+=20px");
-            }
-            break;
+  var touche = e.which;
+  var avionY = parseInt($("#avion").css("top"));
+  var avionX = parseInt($("#avion").css("left"));
+  switch (touche) {
+    case 38:
+    if (avionY >= 20) {
+      $("#avion").css('top', "-=20px");
     }
+    break;
+       case 40:
+       if (avionY < 550) {
+       $("#avion").css('top', "+=20px");
+    }
+    break;
+      case 37:
+         if (avionX > 20) {
+          $("#avion").css('left', "-=20px");
+    }
+    break;
+      case 39:
+          if (avionX < 980) {
+          $("#avion").css('left', "+=20px");
+    }
+    break;
+  }
 
 });
 
@@ -23,6 +34,7 @@ $(document).ready(function () {
 
     ciel();
     rocket();
+    rocket2();
     setInterval(collision, 16);
 
 });
@@ -30,7 +42,7 @@ $(document).ready(function () {
 
 
 function ciel() {
-    $("#nuage").animate({
+    $("#principale").animate({
             backgroundPosition: "-=2000px"
         },
         40000,
@@ -55,6 +67,18 @@ function callback_rocket() {
     test = true;
     setTimeout(rocket);
 }
+
+function rocket2() {
+    var x = Math.floor((Math.random() * 390) + 10);
+
+    $("#rocket").animate({
+        right : x ,
+        bottom: "500px"
+    }, 1800, callback_rocket);
+};
+
+
+//
 var i = 0;
 
 function compteur() {
@@ -70,7 +94,7 @@ function bruitage() {
 function boom() {
     $(".boom").children("img").css({
         right: "400px",
-        top: "0px"
+        top: "100px"
     });
     $(".boom").children("img").attr('src', 'img/200w.gif');
     setTimeout(function () {

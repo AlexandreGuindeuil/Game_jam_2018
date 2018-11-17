@@ -37,6 +37,8 @@ $(document).keydown(function (e) {
 
 });
 
+var score1 = 1000;
+
 function lancerIntro(){
   $("#intro").hide();
   $("#intro2").fadeIn(1000);
@@ -46,6 +48,7 @@ function lancerIntro(){
 function lancerIntro2(){
   $("#intro2").hide();
   $("#wrapper").fadeIn(1000);
+$("#score1").text("Niveau 1: "+score1 +" Points")
   ciel();
   rocket();
   rocket2();
@@ -286,27 +289,38 @@ function changeetat(){
     switch (etatVirus) {
         case 1:
             $("#avion").attr("src","images/degat1.png").css({
-                width: "85px"
-            });
+                width: "85px"            });
+                score1 -= 200
+                $("#score1").text("Niveau 1: "+ score1 +" Points");
             break;
         case 2:
             $("#avion").attr("src","images/degat2.png").css({
                 width: "80px"            });
+                score1 -= 200
+                $("#score1").text("Niveau 1: "+ score1 +" Points");
             break;
         case 3:
             $("#avion").attr("src","images/degat3.png").css({
                 width: "80px"            });
+                score1 -= 200
+                $("#score1").text("Niveau 1: "+ score1 +" Points");
             break;
         case 4:
             $("#avion").attr("src","images/degat4.png").css({
                 width: "75px"            });
+                score1 -= 200
+                $("#score1").text("Niveau 1: "+ score1 +" Points");
             break;
         case 5:
             $("#avion").attr("src","images/degat5.png").css({
                 width: "70px"            });
+                score1 -= 100
+                $("#score1").text("Niveau 1: "+ score1 +" Points");
             break;
         case 6:
             fctmort();
+            score1 -= 100
+            $("#score1").text("Niveau 1: "+score1 );
             break;
         default :
             break;
@@ -335,5 +349,5 @@ function relocal(){
     location.reload();
 }
 function niveaudeux(){
-    window.location.replace("index2.html");
+    window.location.replace("index2.html?score1="+score1);
 }

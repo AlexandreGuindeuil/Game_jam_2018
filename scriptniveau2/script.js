@@ -93,18 +93,31 @@ function ciel() {
 /////////////////
 // LES MOUVEMENTS DES PROJECTILES
 /////////////////
+
 //CARRE
 function carre(){
     console.log("carre");
 
     var y = Math.floor((Math.random() * 390) + 10);
+    
+    $(".vague").animate({
+        left: "-1400px",
 
-    $(".carre").animate({
-        left: "-1200px",
-        top: "-1000px"
-    }, 1800, callback_carre);
+    }, 10000).animate({
+      left:"1400px",
+    },10000)
 
-}
+};
+// function carre2{
+//   var y = Math.floor((Math.random() * 390) + 10);
+//
+//   $(".vague").animate({
+//       left: "-1400px",
+//
+//   }, 10000, carre);
+// }
+
+///
 function callback_carre() {
     var y2 = Math.floor((Math.random() * 390) + 10);
     $(".carre").css({

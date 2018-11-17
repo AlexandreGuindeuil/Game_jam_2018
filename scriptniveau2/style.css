@@ -1,0 +1,99 @@
+body {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+nav {
+    min-height: 100px;
+}
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    margin-left :350px;
+    width: 400px;
+    height: 20px;
+}
+.projectile{
+    height: 20px;
+    width: 20px;
+}
+#principale {
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    width: 1000px;
+    border: 1px solid blue;
+    overflow: hidden;
+    background-image: url(../images/fond.png);
+    background-size:auto;
+}
+
+#accueil {
+    height: 600px;
+}
+
+#intro2 {
+    height: 600px;
+}
+
+#progress{
+    background-color: white;
+
+    border: 15px solid black;
+    height: 45px;
+    border-radius: 2px;
+}
+#nuage {
+    min-height: 400px;
+    width: 1000px;
+    position: absolute;
+}
+
+#avion {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    transition: 0.1s;
+    width: 90px;
+}
+
+.tailleP{
+    width: 50px;
+}
+.rocket {
+    position: absolute;
+    top: 0px;
+    left: 1200px;
+}
+.rocket3 {
+    position: absolute;
+    top: 0px;
+    left: 1200px;
+}
+.rocket2 {
+    position: absolute;
+    top: 0px;
+    left: 1200px;
+}
+.rocket4 {
+    position: absolute;
+    top: 1200px;
+    left: 0px;
+}
+
+#info {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: red;
+    font-size: 1.5em;
+;
+}
+
+.boom {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}

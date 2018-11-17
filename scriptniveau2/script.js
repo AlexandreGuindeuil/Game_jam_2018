@@ -36,17 +36,22 @@ $(document).keydown(function (e) {
     }
 
 });
-
-
-$(document).ready(function () {
+function lancerIntro2(){
+    $("#intro2").hide();
+    $("#wrapper").fadeIn(1000);
     ciel();
     rocket();
     rocket2();
     rocket3();
     rocket4();
     setInterval(collision, 16);
-    decompte()
+    decompte();
+}
 
+
+
+
+$(document).ready(function () {
 });
 
 function btnTest(){

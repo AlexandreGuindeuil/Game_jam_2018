@@ -22,18 +22,7 @@ function relocal(){
 //
 
 
-function decompte() {
-    compteuri++;
-    console.log(compteuri);
-    // $("#timer").text = 61 - compteuri;
-    $("#timer").text(61 - compteuri);
-     if (compteuri == 60) {
 
-         clearTimeout(compteur);
-     }
-    compteur2 = setTimeout(decompte, 1000);
-    $( "#progressbar" ).val(compteuri);
-}
 
 
 

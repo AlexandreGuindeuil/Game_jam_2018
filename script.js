@@ -40,8 +40,13 @@ $(document).keydown(function (e) {
 var score1 = 1000;
 
 function lancerIntro(){
-  console.log("Bonjour");
   $("#intro").hide();
+  $("#intro2").fadeIn(1000);
+}
+
+
+function lancerIntro2(){
+  $("#intro2").hide();
   $("#wrapper").fadeIn(1000);
 $("#score1").text("Niveau 1: "+score1 +" Points")
   ciel();

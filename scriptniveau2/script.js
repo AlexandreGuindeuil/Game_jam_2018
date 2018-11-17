@@ -100,7 +100,10 @@ function carre(){
     console.log("carre");
 
     var y = Math.floor((Math.random() * 390) + 10);
-
+    $(".vague").css({
+        left: "1400px",
+        top:"0px"
+    })
     $(".vague").animate({
         left: "-400px",
         top : "600px"
@@ -318,14 +321,14 @@ function collisioncarre() {
     console.log("carre");
             var avionY = parseInt($("#avion").css("top"));
             var avionX = parseInt($("#avion").css("left"));
-            var rocketY = parseInt($(".vague").css("top"));
-            var rocketX = parseInt($(".vague").css("left"));
+            var rocketY = parseInt($("#vague").css("top"));
+            var rocketX = parseInt($("#vague").css("left"));
 
             rocketX = rocketX - 20;
-            // console.log("avionY" + avionY);
-            //    console.log("avionX" + avionX);
-            //    console.log("rocketY" + rocketY);
-            //    console.log("rocketX" + rocketX);
+             console.log("avionY" + avionY);
+                console.log("avionX" + avionX);
+                console.log("rocketY" + rocketY);
+                console.log("rocketX" + rocketX);
 
             var rectavion = {
                 x: avionX,

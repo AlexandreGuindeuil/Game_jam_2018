@@ -121,7 +121,8 @@ var i = 0;
 function compteur() {
     i++;
     $("#info").text(i);
-    console.log(i);
+    changeEtat();
+
 }
 
 function bruitage() {
@@ -183,33 +184,40 @@ function collision() {
         console.log("collision");
         console.log($("#info"));
         compteur();
+        changeEtat();
         bruitage();
-        boom();
+        //boom();
         test = false;
 
+
     }
+
 }
 function changeEtat(){
+    console.log("testchange")
     etatVirus++;
     switch (etatVirus) {
         case 1:
-            $("#avion").attr("src", "images/malade1.png");
+            $("#avion").attr("src", "images/degat1.png");
             break;
         case 2:
-            $("#avion").attr("src", "images/malade2.png");
+            $("#avion").attr("src", "images/degat2.png");
             break;
         case 3:
-            $("#avion").attr("src", "images/malade3.png");
+            $("#avion").attr("src", "images/degat3.png");
             break;
         case 4:
-            $("#avion").attr("src", "images/malade4.png");
+            $("#avion").attr("src", "images/degat4.png");
             break;
         case 5:
+            $("#avion").attr("src", "images/virusMort.png");
+            break;
+        case 6:
             fctmort();
             break;
     }
 
-    $("#avion").attr("src", "images/rond_rouge.png");
+
 }
 
 function fctmort(){

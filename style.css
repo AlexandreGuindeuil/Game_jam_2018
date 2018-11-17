@@ -26,13 +26,19 @@ progress[value] {
     width: 1000px;
     border: 1px solid blue;
     overflow: hidden;
-    background-image: url(img/ciel.png);
-    background-size:cover;
+    background-image: url(images/fond.png);
+    background-size:auto;
 }
+#progress{
+  background-color: white;
 
+  border: 15px solid black;
+  height: 45px;
+  border-radius: 2px;
+}
 #nuage {
     min-height: 400px;
-    width: 3000px;
+    width: 1000px;
     position: absolute;
 }
 
@@ -43,6 +49,7 @@ progress[value] {
     transition: 0.1s;
     width: 50px;
 }
+
 .tailleP{
   width: 50px;
 }
@@ -60,6 +67,11 @@ progress[value] {
     position: absolute;
     top: 0px;
     left: 1200px;
+}
+.rocket4 {
+    position: absolute;
+    top: 1200px;
+    left: 0px;
 }
 #rocket2{
     position: absolute;

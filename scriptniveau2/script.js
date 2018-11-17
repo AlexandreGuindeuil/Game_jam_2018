@@ -104,17 +104,16 @@ function carre(){
     $(".vague").animate({
         left: "-400px",
         top : "600px"
-
     }, 6000).animate({
       left: "-200px",
       top : "200px"
-    },6000).animate({
+    },3000).animate({
       left: "1400px",
       top : "200px"
     },6000).animate({
       left: "1400px",
       top : "600px"
-    },6000).animate({
+    },3000).animate({
       left: "-200px",
       top : "-200px"
     },6000)

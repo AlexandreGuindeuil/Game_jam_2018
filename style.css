@@ -14,7 +14,7 @@ nav {
     height: 600px;
     width: 1000px;
     border: 1px solid blue;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-image: url(img/ciel.png);
     background-size:cover;
 }

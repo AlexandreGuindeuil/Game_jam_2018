@@ -24,7 +24,6 @@ progress[value] {
     margin: 0 auto;
     height: 600px;
     width: 1000px;
-    border: 1px solid blue;
     overflow: hidden;
     background-image: url(images/fond.png);
     background-size:auto;

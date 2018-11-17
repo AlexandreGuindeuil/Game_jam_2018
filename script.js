@@ -62,6 +62,7 @@ $("#score1").text("Niveau 1: "+score1 +" Points")
 $(document).ready(function () {
 });
 
+
 function btnTest(){
     window.location.replace("index2.html");
 }

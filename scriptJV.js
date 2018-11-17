@@ -8,7 +8,7 @@ var compteuri = 0;
 
 $(document).ready(function () {
 
-compteur()
+decompte()
 
 });
 
@@ -22,7 +22,7 @@ function testbtn(){
 //
 
 
-function compteur() {
+function decompte() {
     compteuri++;
     console.log(compteuri);
     // $("#timer").text = 61 - compteuri;
@@ -31,10 +31,8 @@ function compteur() {
     //
     //     clearTimeout(compteur);
     // }
-    compteur2 = setTimeout(compteur, 1000);
-    $( "#progressbar" ).progressbar({
-        value: 37
-    });
+    compteur2 = setTimeout(decompte, 1000);
+    $( "#progressbar" ).val(compteuri);
 }
 
 

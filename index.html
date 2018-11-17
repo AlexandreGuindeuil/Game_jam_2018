@@ -9,6 +9,8 @@
 
     <script src="script.js"></script>
     <script src="scriptJV.js"></script>
+    <script src="scriptalex.js"></script>
+
 </head>
 
 <body>
@@ -18,10 +20,12 @@
 
     <main>
         <div>
-            <span id="timer">0</span>
+            <span id="timer" style="text-align: center">0</span>
 
         </div>
-        <div id="progressbar" style="height: 20px;"></div>
+        <progress id="progressbar" name="file" max="60" value="0">
+            70%
+        </progress>
         <div id="principale">
             
             <div id="nuage"></div>
@@ -43,12 +47,6 @@
 
 
 
-
-
-
-
-
-
             <div id="son">
                 <audio class="bruitage" src="img/beep.mp3"></audio>
 
@@ -62,3 +60,7 @@
 </body>
 
 </html>
+
+
+
+

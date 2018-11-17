@@ -38,6 +38,7 @@ $(document).ready(function () {
     rocket();
     rocket2();
     rocket3();
+    rocket4();
     setInterval(collision, 16);
 
 });
@@ -69,7 +70,7 @@ $(this).css({
      $(this).delay(500).animate({
              left: "-200px",
              top: y
-         },1800,callback_rocket)
+         },7000,callback_rocket)
   });
 };
 
@@ -102,7 +103,7 @@ $(this).css({
      $(this).delay(800).animate({
              left: "1200px",
              top: y
-         },1800,callback_rocket2)
+         },6000,callback_rocket2)
   });
 };
 
@@ -111,7 +112,7 @@ function callback_rocket2() {
   $(".rocket2").each(function(i){
     var y2 = Math.floor((Math.random() * 390) + 10);
     $(this).css({
-      left: "-20px",
+      left: "-100px",
       top: y2
     });
     test = true;
@@ -125,10 +126,10 @@ function callback_rocket2() {
 function rocket3(){
   console.log("bonjour")
   $(".rocket3").each(function(i){
-
+var y3 = Math.floor((Math.random() * 390) + 10);
 $(this).css({
-  top :"-20px",
-  left:"150px"
+  top :"-100px",
+  left: y3
 })
 
     var y3 = Math.floor((Math.random() * 390) + 10);
@@ -136,7 +137,7 @@ $(this).css({
      $(this).delay(300).animate({
              left: y3,
              top: "1200px"
-         },1800,callback_rocket3)
+         },6000,callback_rocket3)
   });
 };
 
@@ -146,10 +147,47 @@ function callback_rocket3() {
     var y3 = Math.floor((Math.random() * 390) + 10);
     $(this).css({
       left: y3,
-      top: "-20px"
+      top: "-100px"
     });
     test = true;
     setTimeout(rocket3);
+
+  })
+}
+///////
+///////
+
+//////////////
+// BAS HAUT //
+//////////////
+function rocket4(){
+  console.log("bonjour")
+  $(".rocket4").each(function(i){
+var y3 = Math.floor((Math.random() * 390) + 10);
+$(this).css({
+  top :"1100px",
+  left: y3
+})
+
+    var y3 = Math.floor((Math.random() * 390) + 10);
+
+     $(this).delay(300).animate({
+             left: y3,
+             top: "-30px"
+         },6000,callback_rocket4)
+  });
+};
+
+function callback_rocket4() {
+  console.log("bonjour2")
+  $(".rocket4").each(function(i){
+    var y3 = Math.floor((Math.random() * 390) + 10);
+    $(this).css({
+      left: y3,
+      top: "1100px"
+    });
+    test = true;
+    setTimeout(rocket4);
 
   })
 }

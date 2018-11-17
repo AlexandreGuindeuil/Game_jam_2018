@@ -6,10 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
     <script src="scriptJV.js"></script>
+    <script src="scriptalex.js"></script>
+
 </head>
 
 <body>
@@ -19,11 +20,14 @@
 
     <main>
         <div>
-            <span id="timer">0</span>
+            <span id="timer" style="text-align: center">0</span>
 
         </div>
-        <div id="progressbar" style="height: 20px;"></div>
+        <progress id="progressbar" name="file" max="60" value="0">
+            70%
+        </progress>
         <div id="principale">
+            
             <div id="nuage"></div>
             <span id="info">0</span>
             <img id="avion" src="images/virus.png" alt="avion">
@@ -41,6 +45,8 @@
             <img class="tailleP rocket3" src="images/antiCorpsHB.png" alt="rocket">
 
 
+
+
             <div id="son">
                 <audio class="bruitage" src="img/beep.mp3"></audio>
 
@@ -52,9 +58,9 @@
     </main>
 
 </body>
-<<<<<<< Updated upstream
 
-=======
-<script src="scriptAlex.js"></script>
->>>>>>> Stashed changes
 </html>
+
+
+
+

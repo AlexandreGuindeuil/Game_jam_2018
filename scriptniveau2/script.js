@@ -99,23 +99,27 @@ function carre(){
     console.log("carre");
 
     var y = Math.floor((Math.random() * 390) + 10);
-    
-    $(".vague").animate({
-        left: "-1400px",
 
-    }, 10000).animate({
-      left:"1400px",
-    },10000)
+    $(".vague").animate({
+        left: "-400px",
+        top : "600px"
+
+    }, 6000).animate({
+      left: "-200px",
+      top : "200px"
+    },6000).animate({
+      left: "1400px",
+      top : "200px"
+    },6000).animate({
+      left: "1400px",
+      top : "600px"
+    },6000).animate({
+      left: "-200px",
+      top : "-200px"
+    },6000)
 
 };
-// function carre2{
-//   var y = Math.floor((Math.random() * 390) + 10);
-//
-//   $(".vague").animate({
-//       left: "-1400px",
-//
-//   }, 10000, carre);
-// }
+
 
 ///
 function callback_carre() {

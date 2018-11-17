@@ -253,9 +253,8 @@ function bruitage() {
 }
 
 function boom() {
-    $(".boom").children("img").css({
-        right: "400px",
-        top: "100px"
+    $("#avion").attr("src","images/degat1.png").css({
+        width: "85px"
     });
     $(".boom").children("img").attr('src', 'img/200w.gif');
     setTimeout(function () {
@@ -266,45 +265,92 @@ function boom() {
 }
 
 
+var antiCorps = $(".tailleP")
 
 function collision() {
-    var avionY = parseInt($("#avion").css("top"));
-    var avionX = parseInt($("#avion").css("left"));
-    var rocketY = parseInt($("#rocket").css("top"));
-    var rocketX = parseInt($("#rocket").css("left"));
+  for (var i = 0; i < $(".tailleP").length; i++) {
+     $(".tailleP").each(function(){
+           var avionY = parseInt($("#avion").css("top"));
+           var avionX = parseInt($("#avion").css("left"));
+           var rocketY = parseInt($(this).css("top"));
+           var rocketX = parseInt($(this).css("left"));
 
-    rocketX = rocketX - 20;
-    console.log("avionY" + avionY);
-    //    console.log("avionX" + avionX);
-    //    console.log("rocketY" + rocketY);
-    //    console.log("rocketX" + rocketX);
+           rocketX = rocketX - 20;
+               // console.log("avionY" + avionY);
+               //    console.log("avionX" + avionX);
+               //    console.log("rocketY" + rocketY);
+               //    console.log("rocketX" + rocketX);
 
-    var rectavion = {
-        x: avionX,
-        y: avionY,
-        width: 80,
-        height: 60
-    }
-    var rectmissile = {
-        x: rocketX,
-        y: rocketY,
-        width: 30,
-        height: 10
-    }
+               var rectavion = {
+                       x: avionX,
+                       y: avionY,
+                       width: 80,
+                       height: 60
+                   }
+                   var rectmissile = {
+                       x: rocketX,
+                       y: rocketY,
+                       width: 30,
+                       height: 10
+                   }
+             if (rectavion.x < rectmissile.x + rectmissile.width &&
+                       rectavion.x + rectavion.width > rectmissile.x &&
+                       rectavion.y < rectmissile.y + rectmissile.height &&
+                       rectavion.height + rectavion.y > rectmissile.y && test === true) {
+                       console.log("collision");
+                       console.log($("#info"));
+                       compteur();
+                       bruitage();
+                       boom();
+                       test = false;
+                   }
+               })
+ 		}
+   };
 
 
-    if (rectavion.x < rectmissile.x + rectmissile.width &&
-        rectavion.x + rectavion.width > rectmissile.x &&
-        rectavion.y < rectmissile.y + rectmissile.height &&
-        rectavion.height + rectavion.y > rectmissile.y && test === true) {
-        console.log("collision");
-        console.log($("#info"));
-        compteur();
-        bruitage();
-        boom();
-        test = false;
-    }
-}
+
+
+
+
+
+//     var avionY = parseInt($("#avion").css("top"));
+//     var avionX = parseInt($("#avion").css("left"));
+//     var rocketY = parseInt($(".tailleP").css("top"));
+//     var rocketX = parseInt($(".tailleP").css("left"));
+//
+//     rocketX = rocketX - 20;
+//     console.log("avionY" + avionY);
+//     //    console.log("avionX" + avionX);
+//     //    console.log("rocketY" + rocketY);
+//     //    console.log("rocketX" + rocketX);
+//
+//     var rectavion = {
+//         x: avionX,
+//         y: avionY,
+//         width: 80,
+//         height: 60
+//     }
+//     var rectmissile = {
+//         x: rocketX,
+//         y: rocketY,
+//         width: 30,
+//         height: 10
+//     }
+//
+//
+//     if (rectavion.x < rectmissile.x + rectmissile.width &&
+//         rectavion.x + rectavion.width > rectmissile.x &&
+//         rectavion.y < rectmissile.y + rectmissile.height &&
+//         rectavion.height + rectavion.y > rectmissile.y && test === true) {
+//         console.log("collision");
+//         console.log($("#info"));
+//         compteur();
+//         bruitage();
+//         boom();
+//         test = false;
+//     }
+// }
 
 //$(document).keydown(function (collision) {
 //            var avionY = parseInt($("#avion").css("top"));

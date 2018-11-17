@@ -125,7 +125,7 @@ function callback_rocket2() {
 // HAUT BAS //
 //////////////
 function rocket3(){
-  console.log("bonjour")
+  //console.log("bonjour")
   $(".rocket3").each(function(i){
 var y3 = Math.floor((Math.random() * 390) + 10);
 $(this).css({
@@ -199,48 +199,6 @@ $("#btntest").click(function(){
  console.log("test")
 })
 
-
-
-
-// function rocket() {
-//     var y = Math.floor((Math.random() * 390) + 10);
-//
-//     $("#rocket").animate({
-//         left: "-200px",
-//         top: y
-//     }, 1800, callback_rocket);
-// }
-//
-// function callback_rocket() {
-//     var y2 = Math.floor((Math.random() * 390) + 10);
-//     $("#rocket").css({
-//         left: "700px",
-//         top: y2
-//     });
-//     test = true;
-//     setTimeout(rocket);
-// }
-//
-// function rocket2() {
-//
-//     var x = Math.floor((Math.random() * 390) + 10);
-//
-//     $("#rocket2").animate({
-//         left : "+700px",
-//         top : x
-//     }, 1800, callback_rocket2);
-// };
-// function callback_rocket2() {
-//     var y2 = Math.floor((Math.random() * 390) + 10);
-//     $("#rocket2").css({
-//         left: "0px",
-//         top: y2
-//     });
-//     test = true;
-//     setTimeout(rocket2);
-// }
-
-//
 var i = 0;
 
 function compteur() {
@@ -254,9 +212,7 @@ function bruitage() {
 }
 
 function boom() {
-    $("#avion").attr("src","images/degat1.png").css({
-        width: "85px"
-    });
+
     $(".boom").children("img").attr('src', 'img/200w.gif');
     setTimeout(function () {
         $(".boom").children("img").attr('src', '')
@@ -301,6 +257,7 @@ function collision() {
                        console.log("collision");
                        console.log($("#info"));
                        compteur();
+                 changeetat();
                        bruitage();
                        boom();
                        test = false;
@@ -308,6 +265,47 @@ function collision() {
                })
  		}
    };
+
+
+function changeetat(){
+    console.log("testchange");
+    console.log(etatVirus);
+    etatVirus++;
+    switch (etatVirus) {
+        case 1:
+            $("#avion").attr("src","images/degat1.png").css({
+                width: "85px"
+            });
+            break;
+        case 2:
+            $("#avion").attr("src","images/degat2.png").css({
+                width: "80px"            });
+            break;
+        case 3:
+            $("#avion").attr("src","images/degat3.png").css({
+                width: "80px"            });
+            break;
+        case 4:
+            $("#avion").attr("src","images/degat4.png").css({
+                width: "75px"            });
+            break;
+        case 5:
+            $("#avion").attr("src","images/degat5.png").css({
+                width: "70px"            });
+            break;
+        case 6:
+            fctmort();
+            break;
+    }
+
+
+}
+    function fctmort(){
+    console.log("mort")
+        $("#avion").attr("src","images/virusMort.png").css({
+            width: "70px"            });
+    
+    }
 
 
 

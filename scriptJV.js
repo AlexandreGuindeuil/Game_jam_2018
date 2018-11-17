@@ -37,11 +37,7 @@ function decompte() {
 
 
 
-function timer(){
 
-
-
-}
 
 
 //$(document).keydown(function (collision) {

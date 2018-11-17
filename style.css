@@ -44,10 +44,10 @@ progress[value] {
 
 #avion {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 200px;
+    top: 250px;
     transition: 0.1s;
-    width: 50px;
+    width: 90px;
 }
 
 .tailleP{

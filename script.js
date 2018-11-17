@@ -184,17 +184,16 @@ function collision() {
         console.log("collision");
         console.log($("#info"));
         compteur();
-        changeEtat();
         bruitage();
-        //boom();
+        boom();
         test = false;
 
 
     }
 
 }
-function changeEtat(){
-    console.log("testchange")
+function changeetat(){
+    console.log("testchange");
     etatVirus++;
     switch (etatVirus) {
         case 1:

@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="scriptniveau2/script.js"></script>
+
 </head>
+
 <body>
-tzffsdf
+<nav>
+
+</nav>
+
+<main>
+    <div id="wrapper">
+        <div>
+            <span id="timer" style="text-align: center">0</span>
+
+        </div>
+        <progress id="progressbar" name="file" max="60" value="0">
+            70%
+        </progress>
+        <div id="principale">
+
+            <div id="nuage"></div>
+            <span id="info">0</span>
+            <img id="avion" src="images/virus.png" alt="avion">
+
+            <img class="tailleP rocket2" src="images/antiCorpsGD.png" alt="rocket">
+            <img class="tailleP rocket2" src="images/antiCorpsGD.png" alt="rocket">
+            <img class="tailleP rocket2" src="images/antiCorpsGD.png" alt="rocket">
+            <img class="tailleP rocket2" src="images/antiCorpsGD.png" alt="rocket">
+            <img class="tailleP rocket3" src="images/antiCorpsHB.png" alt="rocket">
+            <img class="tailleP rocket3" src="images/antiCorpsHB.png" alt="rocket">
+            <img class="tailleP rocket3" src="images/antiCorpsHB.png" alt="rocket">
+            <img class="tailleP rocket3" src="images/antiCorpsHB.png" alt="rocket">
+
+
+
+
+            <div id="son">
+                <audio class="bruitage" src="img/beep.mp3"></audio>
+
+            </div>
+            <div class="boom"><img src="" alt=""></div>
+
+        </div>
+    </div>
+    <div id="conclusion" style="display:none"><img src="images/ecranFinPerdu.png" style="width:1200px"alt="">
+
+        <button onclick="relocal()">Recommencer ! </button></div>
+    <div id="reussite" style="display:none"><img src="images/ecranFinVictoire.png" style="width:1200px"alt="">
+        <button onclick="niveaudeux()">Passez au niveau 2.</button></div>
+    <button id="btntest" onclick="btnTest()" >Test</button>
+</main>
+
 </body>
+
 </html>
+
+
+
+

@@ -7,22 +7,22 @@ $(document).keydown(function (e) {
   switch (touche) {
     case 38:
     if (avionY >= 20) {
-      $("#avion").css('top', "-=20px");
+      $("#avion").css('top', "-=25px");
     }
     break;
        case 40:
        if (avionY < 550) {
-       $("#avion").css('top', "+=20px");
+       $("#avion").css('top', "+=25px");
     }
     break;
       case 37:
          if (avionX > 20) {
-          $("#avion").css('left', "-=20px");
+          $("#avion").css('left', "-=25px");
     }
     break;
       case 39:
           if (avionX < 980) {
-          $("#avion").css('left', "+=20px");
+          $("#avion").css('left', "+=25px");
     }
     break;
     case 32:
@@ -58,24 +58,25 @@ function ciel() {
 /////////////////
 
 function rocket(){
-  $(".rocket").each(function(i){
+  $(".rocket").each(function(i) {
+      var y = Math.floor((Math.random() * 1000) + 10);
+      $(this).css({
+          left: "1200px"
+      })
 
-$(this).css({
-  top :"200px",
-  left:"1200px"
-})
+      $(this).delay(800).animate({
+          left: "-200px",
+          top: y
+      },4000,callback_rocket)
 
-    var y = Math.floor((Math.random() * 390) + 10);
 
-     $(this).delay(500).animate({
-             left: "-200px",
-             top: y
-         },7000,callback_rocket)
+
+
+
   });
-};
+}
 
 function callback_rocket() {
-  console.log("test")
   $(".rocket").each(function(i){
     var y2 = Math.floor((Math.random() * 390) + 10);
     $(this).css({
@@ -103,7 +104,7 @@ $(this).css({
      $(this).delay(800).animate({
              left: "1200px",
              top: y
-         },6000,callback_rocket2)
+         },10000,callback_rocket2)
   });
 };
 
@@ -137,7 +138,7 @@ $(this).css({
      $(this).delay(300).animate({
              left: y3,
              top: "1200px"
-         },6000,callback_rocket3)
+         },7000,callback_rocket3)
   });
 };
 

@@ -50,6 +50,7 @@ function lancerIntro2(){
     rocket4();
     setInterval(collision, 16);
     decompte();
+    carre();
 }
 
 
@@ -92,6 +93,27 @@ function ciel() {
 /////////////////
 // LES MOUVEMENTS DES PROJECTILES
 /////////////////
+//CARRE
+function carre(){
+    console.log("carre");
+
+    var y = Math.floor((Math.random() * 390) + 10);
+
+    $(".carre").animate({
+        left: "-1200px",
+        top: "-1000px"
+    }, 1800, callback_carre);
+
+}
+function callback_carre() {
+    var y2 = Math.floor((Math.random() * 390) + 10);
+    $(".carre").css({
+        left: "700px",
+        top: y2
+    });
+    test = true;
+    setTimeout(carre);
+}
 
 //DROITE GAUCHE//
 function rocket(){
@@ -233,7 +255,7 @@ function boom() {
 }
 
 
-var antiCorps = $(".tailleP")
+var antiCorps = $(".tailleP");
 
 function collision() {
     for (var i = 0; i < $(".tailleP").length; i++) {
@@ -279,6 +301,7 @@ function collision() {
 
 
 function changeetat(){
+
     console.log("testchange");
     console.log(etatVirus);
     etatVirus++;

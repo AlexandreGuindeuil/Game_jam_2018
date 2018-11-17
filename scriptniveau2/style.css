@@ -23,7 +23,7 @@ progress[value] {
     position: relative;
     margin: 0 auto;
     height: 600px;
-    width: 1000px;
+    width: 1400px;
     border: 1px solid blue;
     overflow: hidden;
     background-image: url(../images/fond.png);
@@ -61,6 +61,12 @@ progress[value] {
 
 .tailleP{
     width: 50px;
+}
+
+.vague {
+    position: absolute;
+    top: 200px;
+    left: 1200px;
 }
 .rocket {
     position: absolute;

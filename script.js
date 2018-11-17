@@ -332,16 +332,14 @@ function fctmort(){
     console.log("mort")
     $("#avion").attr("src","images/virusMort.png").css({
         width: "70px"            });
-    $("#wrapper").fadeOut(1000);
-
-
+    $("#wrapper").hide();
     $("#conclusion").fadeIn(1000);
 
 }
 function reussite(){
     console.log("mort");
     etatVirus =10;
-    $("#wrapper").fadeOut(1000);
+    $("#wrapper").hide();
     $("#reussite").fadeIn(1000);
 
 }

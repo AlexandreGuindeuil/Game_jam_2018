@@ -1,7 +1,5 @@
 body {
     width: 1500px;
-
-
 }
 
 nav {
@@ -15,6 +13,19 @@ progress[value] {
     width: 400px;
     height: 20px;
 }
+
+#intro {
+  padding-left: 500px;
+}
+
+#intro2 {
+  padding-left: 265px;
+}
+
+#wrapper {
+  padding-left: 1000px;
+}
+
 .projectile{
     height: 20px;
     width: 20px;
@@ -45,6 +56,7 @@ progress[value] {
   height: 45px;
   border-radius: 2px;
 }
+
 #nuage {
     min-height: 400px;
     width: 1000px;

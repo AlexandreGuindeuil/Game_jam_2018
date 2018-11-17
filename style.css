@@ -29,6 +29,11 @@ progress[value] {
     background-image: url(images/fond.png);
     background-size:auto;
 }
+
+#accueil {
+  height: 600px; 
+}
+
 #progress{
   background-color: white;
 

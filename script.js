@@ -37,16 +37,22 @@ $(document).keydown(function (e) {
 
 });
 
+function lancerIntro(){
+  console.log("Bonjour");
+  $("#intro").hide();
+  $("#wrapper").fadeIn(1000);
+
+  ciel();
+  rocket();
+  rocket2();
+  rocket3();
+  rocket4();
+  setInterval(collision, 16);
+  decompte();
+}
+
 
 $(document).ready(function () {
-    ciel();
-    rocket();
-    rocket2();
-    rocket3();
-    rocket4();
-    setInterval(collision, 16);
-    decompte()
-
 });
 
 function btnTest(){

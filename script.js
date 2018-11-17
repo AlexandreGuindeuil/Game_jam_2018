@@ -1,20 +1,35 @@
 var test = true;
+var etatVirus = 0;
+var compteur;
+var compteuri = 0;
+
 
 $(document).keydown(function (e) {
-    var touche = e.which;
-    var avionY = parseInt($("#avion").css("top"));
-    switch (touche) {
-        case 38:
-            if (avionY >= 20) {
-                $("#avion").css('top', "-=20px");
-            }
-            break;
-        case 40:
-            if (avionY < 272) {
-                $("#avion").css('top', "+=20px");
-            }
-            break;
+  var touche = e.which;
+  var avionY = parseInt($("#avion").css("top"));
+  var avionX = parseInt($("#avion").css("left"));
+  switch (touche) {
+    case 38:
+    if (avionY >= 20) {
+      $("#avion").css('top', "-=20px");
     }
+    break;
+       case 40:
+       if (avionY < 550) {
+       $("#avion").css('top', "+=20px");
+    }
+    break;
+      case 37:
+         if (avionX > 20) {
+          $("#avion").css('left', "-=20px");
+    }
+    break;
+      case 39:
+          if (avionX < 980) {
+          $("#avion").css('left', "+=20px");
+    }
+    break;
+  }
 
 });
 
@@ -23,14 +38,20 @@ $(document).ready(function () {
 
     ciel();
     rocket();
+    rocket2();
+    rocket3();
     setInterval(collision, 16);
+    timer();
 
 });
 
-
+function testbtn(){
+    console.log("test bouton");
+    $("#avion").attr("src", "images/rond_rouge.png");
+}
 
 function ciel() {
-    $("#nuage").animate({
+    $("#principale").animate({
             backgroundPosition: "-=2000px"
         },
         40000,
@@ -49,12 +70,52 @@ function rocket() {
 function callback_rocket() {
     var y2 = Math.floor((Math.random() * 390) + 10);
     $("#rocket").css({
-        left: "700px",
+        left: "1200px",
         top: y2
     });
     test = true;
     setTimeout(rocket);
 }
+
+function rocket2() {
+
+    var x = Math.floor((Math.random() * 390) + 10);
+
+    $("#rocket2").animate({
+        left : "+1200px",
+        top : x
+    }, 1800, callback_rocket2);
+};
+function callback_rocket2() {
+    var y2 = Math.floor((Math.random() * 390) + 10);
+    $("#rocket2").css({
+        left: "-100px",
+        top: y2
+    });
+    test = true;
+    setTimeout(rocket2);
+}
+
+function rocket3() {
+
+    var x2 = Math.floor((Math.random() * 390) + 10);
+
+    $("#rocket3").animate({
+        left : x2 ,
+        top : "+600px"
+    }, 1800, callback_rocket3);
+};
+function callback_rocket3() {
+    var y2 = Math.floor((Math.random() * 390) -600);
+    $("#rocket3").css({
+        left: "400px",
+        top: y2
+    });
+    test = true;
+    setTimeout(rocket3);
+}
+
+//
 var i = 0;
 
 function compteur() {
@@ -70,7 +131,7 @@ function bruitage() {
 function boom() {
     $(".boom").children("img").css({
         right: "400px",
-        top: "0px"
+        top: "100px"
     });
     $(".boom").children("img").attr('src', 'img/200w.gif');
     setTimeout(function () {
@@ -80,6 +141,13 @@ function boom() {
 
 }
 
+function timer(){
+
+    $( "#progressbar" ).progressbar({
+        value: 37
+    });
+
+}
 
 
 function collision() {
@@ -103,8 +171,8 @@ function collision() {
     var rectmissile = {
         x: rocketX,
         y: rocketY,
-        width: 30,
-        height: 10
+        width: 20,
+        height: 20
     }
 
 
@@ -118,9 +186,53 @@ function collision() {
         bruitage();
         boom();
         test = false;
+
     }
 }
+function changeEtat(){
+    etatVirus++;
+    switch (etatVirus) {
+        case 1:
+            $("#avion").attr("src", "images/malade1.png");
+            break;
+        case 2:
+            $("#avion").attr("src", "images/malade2.png");
+            break;
+        case 3:
+            $("#avion").attr("src", "images/malade3.png");
+            break;
+        case 4:
+            $("#avion").attr("src", "images/malade4.png");
+            break;
+        case 5:
+            fctmort();
+            break;
+    }
 
+    $("#avion").attr("src", "images/rond_rouge.png");
+}
+
+function fctmort(){
+    $("#avion").attr("src", "images/mort.png");
+}
+function decompte() {
+    i++;
+    console.log(i);
+    document.getElementById("temps").value = 11 - i;
+    if (i == 10) {
+        clearTimeout(compteur);
+    }
+    compteur = setTimeout(decompte, 1000);
+}
+
+function stop() {
+    clearTimeout(compteur);
+}
+
+window.addEventListener("load", function() {
+    decompte();
+    document.addEventListener("click", stop);
+});
 //$(document).keydown(function (collision) {
 //            var avionY = parseInt($("#avion").css("top"));
 //

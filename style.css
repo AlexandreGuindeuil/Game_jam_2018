@@ -7,21 +7,25 @@ body {
 nav {
     min-height: 100px;
 }
-
+.projectile{
+    height: 20px;
+    width: 20px;
+}
 #principale {
     position: relative;
     margin: 0 auto;
-    height: 400px;
-    width: 600px;
+    height: 600px;
+    width: 1000px;
     border: 1px solid blue;
     overflow: hidden;
+    background-image: url(img/ciel.png);
+    background-size:cover;
 }
 
 #nuage {
     min-height: 400px;
     width: 30000px;
     position: absolute;
-    background-image: url(img/ciel.png)
 }
 
 #avion {
@@ -29,14 +33,24 @@ nav {
     left: 0px;
     top: 0px;
     transition: 0.1s;
+    width: 50px;
 }
 
 #rocket {
     position: absolute;
     top: 0px;
-    left: 700px;
+    left: 1200px;
 }
-
+#rocket2 {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+}
+#rocket3 {
+    position: absolute;
+    top: -100px;
+    left: 400px;
+}
 #info {
     position: absolute;
     right: 10px;

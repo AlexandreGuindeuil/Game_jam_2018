@@ -3,8 +3,9 @@ var test = true;
 var etatVirus = 0;
 var compteur;
 var compteuri = 0;
-
-
+var chemin = window.location.pathname; //chemin reçoit le chemin de l'url, c'est-à-dire /article/1.
+var url = window.location.href; //la variable url reçoit l'URL courante, c'est-à-dire http://www.example.com/article/1.
+var ancienScore1 = url.split("=")[1];
 // Mouvement des joueurs
 $(document).keydown(function (e) {
     var touche = e.which;
@@ -36,9 +37,12 @@ $(document).keydown(function (e) {
     }
 
 });
+var score2 = 1000;
 function lancerIntro2(){
     $("#intro2").hide();
     $("#wrapper").fadeIn(1000);
+    $("#score2").text("Niveau 2: "+score2+" Points")
+    $("#score1").text("Niveau 1: "+ancienScore1+" Points")
     ciel();
     rocket();
     rocket2();
@@ -283,22 +287,32 @@ function changeetat(){
             $("#avion").attr("src","images/degat1.png").css({
                 width: "85px"
             });
+            score2 -= 200
+            $("#score2").text("Niveau 2: "+ score2 +" Points");
             break;
         case 2:
             $("#avion").attr("src","images/degat2.png").css({
                 width: "80px"            });
+                score1 -= 200
+                $("#score2").text("Niveau 2: "+ score2 +" Points");
             break;
         case 3:
             $("#avion").attr("src","images/degat3.png").css({
                 width: "80px"            });
+                score2 -= 200
+                $("#score2").text("Niveau 2: "+ score2 +" Points");
             break;
         case 4:
             $("#avion").attr("src","images/degat4.png").css({
                 width: "75px"            });
+                score2 -= 200
+                $("#score2").text("Niveau 2: "+ score2 +" Points");
             break;
         case 5:
             $("#avion").attr("src","images/degat5.png").css({
                 width: "70px"            });
+                score2 -= 200
+                $("#score2").text("Niveau 2: "+ score2 +" Points");
             break;
         case 6:
             fctmort();

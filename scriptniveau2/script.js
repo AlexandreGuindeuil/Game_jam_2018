@@ -28,7 +28,7 @@ $(document).keydown(function (e) {
             }
             break;
         case 39:
-            if (avionX < 980) {
+            if (avionX < 1350) {
                 $("#avion").css('left', "+=25px");
             }
             break;
@@ -51,6 +51,7 @@ function lancerIntro2(){
     setInterval(collision, 16);
     decompte();
     carre();
+    collisioncarre();
 }
 
 
@@ -304,8 +305,6 @@ function collision() {
                 rectavion.x + rectavion.width > rectmissile.x &&
                 rectavion.y < rectmissile.y + rectmissile.height &&
                 rectavion.height + rectavion.y > rectmissile.y && test === true) {
-                console.log("collision");
-                console.log($("#info"));
                 compteur();
                 changeetat();
                 bruitage();
@@ -316,6 +315,42 @@ function collision() {
     }
 };
 
+function collisioncarre() {
+    console.log("carre");
+            var avionY = parseInt($("#avion").css("top"));
+            var avionX = parseInt($("#avion").css("left"));
+            var rocketY = parseInt($(".vague").css("top"));
+            var rocketX = parseInt($(".vague").css("left"));
+
+            rocketX = rocketX - 20;
+            // console.log("avionY" + avionY);
+            //    console.log("avionX" + avionX);
+            //    console.log("rocketY" + rocketY);
+            //    console.log("rocketX" + rocketX);
+
+            var rectavion = {
+                x: avionX,
+                y: avionY,
+                width: 50,
+                height: 50
+            }
+            var rectmissile = {
+                x: rocketX,
+                y: rocketY,
+                width: 100,
+                height: 100
+            }
+            if (rectavion.x < rectmissile.x + rectmissile.width &&
+                rectavion.x + rectavion.width > rectmissile.x &&
+                rectavion.y < rectmissile.y + rectmissile.height &&
+                rectavion.height + rectavion.y > rectmissile.y && test === true) {
+                console.log("collision");
+                fctmort();
+                test = false;
+            }
+
+
+};
 
 function changeetat(){
 
@@ -364,7 +399,8 @@ function changeetat(){
 
 }
 function fctmort(){
-    console.log("mort")
+    console.log("mort");
+    $(".bruitage2").trigger('play');
     $("#avion").attr("src","images/virusMort.png").css({
         width: "70px"            });
     $("#wrapper").fadeOut(1000);

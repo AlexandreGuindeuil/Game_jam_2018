@@ -109,6 +109,7 @@ progress[value] {
   list-style: none;
   font-size: 18pt;
  font-weight: bold;
+ color: white;
  font-family: Verdana;
 }
 .scoreboard {

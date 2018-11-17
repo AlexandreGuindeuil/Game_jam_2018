@@ -1,6 +1,6 @@
 body {
-    width: 1200px;
-    margin: 0 auto;
+    width: 1500px;
+
 
 }
 
@@ -31,7 +31,7 @@ progress[value] {
 }
 
 #accueil {
-  height: 600px; 
+  height: 600px;
 }
 
 #progress{
@@ -92,4 +92,28 @@ progress[value] {
     position: absolute;
     right: 10px;
     top: 0px;
+}
+.scoreboard h1{
+  font-size: 18pt;
+  font-family: Verdana;
+  padding-left: 10px;
+  border-bottom: 1px solid indianred;
+  padding-bottom: 15px;
+}
+.scoreboard li{
+  list-style: none;
+  font-size: 18pt;
+ font-weight: bold;
+ font-family: Verdana;
+}
+.scoreboard {
+  border : 1px solid indianred;
+ width: 400px;
+}
+.structure{
+  display: flex;
+  flex-flow: row wrap;
+}
+body{
+  background-color: #262626;
 }

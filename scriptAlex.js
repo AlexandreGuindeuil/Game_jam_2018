@@ -1,4 +1,8 @@
 var test = true;
+var test = true;
+var etatVirus = 0;
+var compteur;
+var compteuri = 0;
 
 $(document).keydown(function (e) {
   var touche = e.which;
@@ -40,8 +44,10 @@ $(document).ready(function () {
     rocket3();
     rocket4();
     setInterval(collision, 16);
+    decompte()
 
 });
+
 
 function btnTest(){
     console.log("test");
@@ -50,6 +56,18 @@ function btnTest(){
 
     $("#conclusion").fadeIn(1000);
 
+}
+function decompte() {
+    compteuri++;
+    console.log(compteuri);
+    // $("#timer").text = 61 - compteuri;
+    $("#timer").text(61 - compteuri);
+    if (compteuri == 60) {
+
+        clearTimeout(compteur);
+    }
+    compteur2 = setTimeout(decompte, 1000);
+    $( "#progressbar" ).val(compteuri);
 }
 
 function ciel() {
@@ -75,10 +93,6 @@ function rocket(){
           left: "-200px",
           top: y
       },4000,callback_rocket)
-
-
-
-
 
   });
 }

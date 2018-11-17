@@ -43,7 +43,14 @@ $(document).ready(function () {
 
 });
 
+function btnTest(){
+    console.log("test");
+    $("#wrapper").fadeOut(1000);
 
+
+    $("#conclusion").fadeIn(1000);
+
+}
 
 function ciel() {
     $("#principale").animate({
@@ -194,10 +201,7 @@ function callback_rocket4() {
 }
 ///////
 ///////
-$("#btntest").click(function(){
- $("#avion").attr("src","images/virusInvincible.png")
- console.log("test")
-})
+
 
 var i = 0;
 
@@ -304,8 +308,20 @@ function changeetat(){
     console.log("mort")
         $("#avion").attr("src","images/virusMort.png").css({
             width: "70px"            });
-    
+        $("#wrapper").fadeOut(1000);
+
+
+        $("#conclusion").fadeIn(1000);
+
     }
+function reussite(){
+    console.log("mort")
+    $("#wrapper").fadeOut(1000);
+
+
+    $("#reussite").fadeIn(1000);
+
+}
 
 
 

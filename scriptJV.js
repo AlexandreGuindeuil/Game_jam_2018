@@ -12,9 +12,9 @@ decompte()
 
 });
 
-function testbtn(){
-    console.log("test bouton");
-    $("#avion").attr("src", "images/rond_rouge.png");
+function relocal(){
+    location.reload();
+
 }
 
 
@@ -27,10 +27,10 @@ function decompte() {
     console.log(compteuri);
     // $("#timer").text = 61 - compteuri;
     $("#timer").text(61 - compteuri);
-    // if (compteuri == 60) {
-    //
-    //     clearTimeout(compteur);
-    // }
+     if (compteuri == 60) {
+
+         clearTimeout(compteur);
+     }
     compteur2 = setTimeout(decompte, 1000);
     $( "#progressbar" ).val(compteuri);
 }

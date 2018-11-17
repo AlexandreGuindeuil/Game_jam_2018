@@ -5,31 +5,31 @@ var compteuri = 0;
 
 
 $(document).keydown(function (e) {
-  var touche = e.which;
-  var avionY = parseInt($("#avion").css("top"));
-  var avionX = parseInt($("#avion").css("left"));
-  switch (touche) {
-    case 38:
-    if (avionY >= 20) {
-      $("#avion").css('top', "-=20px");
+    var touche = e.which;
+    var avionY = parseInt($("#avion").css("top"));
+    var avionX = parseInt($("#avion").css("left"));
+    switch (touche) {
+        case 38:
+            if (avionY >= 20) {
+                $("#avion").css('top', "-=20px");
+            }
+            break;
+        case 40:
+            if (avionY < 550) {
+                $("#avion").css('top', "+=20px");
+            }
+            break;
+        case 37:
+            if (avionX > 20) {
+                $("#avion").css('left', "-=20px");
+            }
+            break;
+        case 39:
+            if (avionX < 980) {
+                $("#avion").css('left', "+=20px");
+            }
+            break;
     }
-    break;
-       case 40:
-       if (avionY < 550) {
-       $("#avion").css('top', "+=20px");
-    }
-    break;
-      case 37:
-         if (avionX > 20) {
-          $("#avion").css('left', "-=20px");
-    }
-    break;
-      case 39:
-          if (avionX < 980) {
-          $("#avion").css('left', "+=20px");
-    }
-    break;
-  }
 
 });
 
@@ -215,24 +215,9 @@ function changeEtat(){
 function fctmort(){
     $("#avion").attr("src", "images/mort.png");
 }
-function decompte() {
-    i++;
-    console.log(i);
-    document.getElementById("temps").value = 11 - i;
-    if (i == 10) {
-        clearTimeout(compteur);
-    }
-    compteur = setTimeout(decompte, 1000);
-}
 
-function stop() {
-    clearTimeout(compteur);
-}
 
-window.addEventListener("load", function() {
-    decompte();
-    document.addEventListener("click", stop);
-});
+
 //$(document).keydown(function (collision) {
 //            var avionY = parseInt($("#avion").css("top"));
 //

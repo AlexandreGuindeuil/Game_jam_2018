@@ -24,7 +24,7 @@ nav {
 
 #nuage {
     min-height: 400px;
-    width: 30000px;
+    width: 3000px;
     position: absolute;
 }
 
@@ -35,13 +35,25 @@ nav {
     transition: 0.1s;
     width: 50px;
 }
-
-#rocket {
+.tailleP{
+  width: 50px;
+}
+.rocket {
     position: absolute;
     top: 0px;
     left: 1200px;
 }
-#rocket2 {
+.rocket3 {
+    position: absolute;
+    top: 0px;
+    left: 1200px;
+}
+.rocket2 {
+    position: absolute;
+    top: 0px;
+    left: 1200px;
+}
+#rocket2{
     position: absolute;
     top: 0px;
     left: -100px;

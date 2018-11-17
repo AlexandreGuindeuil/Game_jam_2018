@@ -38,10 +38,14 @@ $(document).keydown(function (e) {
 });
 
 function lancerIntro(){
-  console.log("Bonjour");
   $("#intro").hide();
-  $("#wrapper").fadeIn(1000);
+  $("#intro2").fadeIn(1000);
+}
 
+
+function lancerIntro2(){
+  $("#intro2").hide();
+  $("#wrapper").fadeIn(1000);
   ciel();
   rocket();
   rocket2();

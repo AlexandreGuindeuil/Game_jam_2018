@@ -31,8 +31,13 @@ progress[value] {
 }
 
 #accueil {
-  height: 600px; 
+  height: 600px;
 }
+
+#intro2 {
+  height: 600px;
+}
+
 
 #progress{
   background-color: white;

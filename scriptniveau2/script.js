@@ -62,7 +62,7 @@ $(document).ready(function () {
 });
 
 function btnTest(){
-    window.location.replace("index2.html");
+    window.location.replace("index3.html?score1="+ancienScore1+"&score2="+score2);
 }
 var i = 0;
 
@@ -78,7 +78,7 @@ function decompte() {
     console.log(compteuri);
     // $("#timer").text = 61 - compteuri;
     $("#timer").text(61 - compteuri);
-    
+
     compteur2 = setTimeout(decompte, 1000);
     $( "#progressbar" ).val(compteuri);
 

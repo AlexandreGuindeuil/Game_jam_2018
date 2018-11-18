@@ -1,7 +1,8 @@
-<<<<<<< Updated upstream:scriptniveau3/style3.css
+
 body {
     width: 1200px;
     margin: 0 auto;
+    background-color: #262626;
 
 }
 
@@ -136,7 +137,7 @@ progress[value] {
   flex-flow: row wrap;
 }
 .alert{
-  font-size: 18pt
+  font-size: 18pt;
   color :black;
   font-family: verdana;
   transition: color .3s;
@@ -157,13 +158,10 @@ progress[value] {
 }
 body{
   background-color: #262626;
-}
-=======
-body {
     width: 1200px;
     margin: 0 auto;
-
 }
+
 
 nav {
     min-height: 100px;
@@ -224,12 +222,19 @@ progress[value] {
     width: 50px;
 }
 
-#vague {
-    /*width:100px,*/
-    /*height:100px*/
+.vague {
+    width:200px;
+    height:200px;
     position: absolute;
     top: 0px;
-    left: 1400px;
+    left: 900px;
+}
+.vague2{
+    width:200px;
+    height:200px;
+    position: absolute;
+    top: -200px;
+    left: 100px;
 }
 .rocket {
     position: absolute;
@@ -294,7 +299,4 @@ progress[value] {
   display: flex;
   flex-flow: row wrap;
 }
-body{
-  background-color: #262626;
-}
->>>>>>> Stashed changes:scriptniveau2/style.css
+

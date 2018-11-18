@@ -63,7 +63,7 @@ progress[value] {
     width: 50px;
 }
 
-.vague {
+#vague {
     /*width:100px,*/
     /*height:100px*/
     position: absolute;
@@ -87,8 +87,8 @@ progress[value] {
 }
 .rocket4 {
     position: absolute;
-    top: 1200px;
-    left: 0px;
+    top: 0px;
+    left: 500px;
 }
 
 #info {

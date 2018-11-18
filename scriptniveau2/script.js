@@ -51,7 +51,7 @@ function lancerIntro2(){
     setInterval(collision, 16);
     decompte();
     carre();
-    collisioncarre();
+    setInterval(collisioncarre,16);
 }
 
 
@@ -140,12 +140,12 @@ function rocket(){
     $(".rocket").each(function(i) {
         var y = Math.floor((Math.random() * 1000) + 10);
         $(this).css({
-            left: "1200px"
+            left: "1500px"
         })
         $(this).delay(800).animate({
             left: "-200px",
             top: y
-        },5000,callback_rocket)
+        },5800,callback_rocket)
     });
 }
 function callback_rocket() {
@@ -170,10 +170,10 @@ function rocket2(){
             top :"120px"
         })
 
-        var y = Math.floor((Math.random() * 390) + 10);
+        var y = Math.floor((Math.random() * 700) + 10);
 
         $(this).delay(800).animate({
-            left: "1200px",
+            left: "1600px",
             top: y
         },10000,callback_rocket2)
     });
@@ -181,7 +181,7 @@ function rocket2(){
 function callback_rocket2() {
     console.log("test")
     $(".rocket2").each(function(i){
-        var y2 = Math.floor((Math.random() * 390) + 10);
+        var y2 = Math.floor((Math.random() * 700) + 10);
         $(this).css({
             left: "-100px",
             top: y2
@@ -207,7 +207,7 @@ function rocket3(){
         $(this).delay(300).animate({
             left: y3,
             top: "1200px"
-        },7000,callback_rocket3)
+        },5000,callback_rocket3)
     });
 };
 
@@ -225,31 +225,31 @@ function callback_rocket3() {
     })
 }
 
-// BAS HAUT //
+// HAUT BAS 2 //
 function rocket4(){
-    console.log("bonjour")
+    console.log("rocket4");
     $(".rocket4").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) + 10);
+        var y3 = Math.floor((Math.random() * 390) +600);
         $(this).css({
-            top :"1100px",
+            top :"-150px",
             left: y3
         })
 
-        var y3 = Math.floor((Math.random() * 390) + 10);
+        var y3 = Math.floor((Math.random() * 900) + 10);
 
         $(this).delay(300).animate({
             left: y3,
-            top: "-30px"
-        },6000,callback_rocket4)
+            top: "1200px"
+        },4000,callback_rocket4)
     });
 };
+
 function callback_rocket4() {
-    console.log("bonjour2")
     $(".rocket4").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) + 10);
+        var y3 = Math.floor((Math.random() * 390) + 600);
         $(this).css({
             left: y3,
-            top: "1100px"
+            top: "-200px"
         });
         test = true;
         setTimeout(rocket4);
@@ -317,18 +317,20 @@ function collision() {
     }
 };
 
+
+
 function collisioncarre() {
-    console.log("carre");
+    //console.log("carre");
             var avionY = parseInt($("#avion").css("top"));
             var avionX = parseInt($("#avion").css("left"));
             var rocketY = parseInt($("#vague").css("top"));
             var rocketX = parseInt($("#vague").css("left"));
 
             rocketX = rocketX - 20;
-             console.log("avionY" + avionY);
-                console.log("avionX" + avionX);
-                console.log("rocketY" + rocketY);
-                console.log("rocketX" + rocketX);
+             // console.log("avionY" + avionY);
+             //    console.log("avionX" + avionX);
+             //    console.log("rocketY" + rocketY);
+             //    console.log("rocketX" + rocketX);
 
             var rectavion = {
                 x: avionX,
@@ -342,6 +344,9 @@ function collisioncarre() {
                 width: 100,
                 height: 100
             }
+    // console.log(rectmissile.x);
+    // console.log(rectmissile.y);
+
             if (rectavion.x < rectmissile.x + rectmissile.width &&
                 rectavion.x + rectavion.width > rectmissile.x &&
                 rectavion.y < rectmissile.y + rectmissile.height &&
@@ -349,10 +354,16 @@ function collisioncarre() {
                 console.log("collision");
                 fctmort();
                 test = false;
+                compteur();
+                changeetat();
+                bruitage();
+                boom();
+                test = false;
             }
 
 
 };
+
 
 function changeetat(){
 

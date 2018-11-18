@@ -335,7 +335,7 @@ function fctmort(){
         width: "70px"            });
     $("#wrapper").hide();
     $("#conclusion").fadeIn(1000);
-
+    compteuri = compteuri - 1000; 
 }
 function reussite(){
     console.log("mort");

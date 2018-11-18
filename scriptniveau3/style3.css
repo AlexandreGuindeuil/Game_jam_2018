@@ -62,7 +62,7 @@ progress[value] {
 #avion2 {
     position: absolute;
     left: 200px;
-    top: 250px;
+    top: 350px;
     transition: 0.1s;
     width: 90px;
 }

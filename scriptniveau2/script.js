@@ -102,15 +102,13 @@ function decompte() {
     $("#progressbar").val(compteuri);
     if (compteuri == 50) {
 
-
-      $(".alert").css("display","block")
+      lastsecondes();
       carre2()
     } else if (compteuri == 61) {
       $(".alert").css("display","none")
     } else {
       return false
 
-        lastsecondes();
 
     }
 }
@@ -538,6 +536,8 @@ function changeetat(){
 
 
 }
+
+
 function fctmort(){
     console.log("mort");
     $(".alert").css("display","none")

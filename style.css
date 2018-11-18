@@ -71,7 +71,7 @@ progress[value] {
     position: absolute;
     left: 200px;
     top: 250px;
-    transition: 0.1s;
+    transition:  top .1s;
     width: 90px;
 }
 

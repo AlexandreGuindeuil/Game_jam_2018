@@ -45,44 +45,37 @@ $(document).keydown(function (e) {
 
 });
 
-$(document).keydown(function (event) {
-    var touche = event.which;
-    var avion2Y = parseInt($("#avion2").css("top"));
-    var avion2X = parseInt($("#avion2").css("left"));
+$(document).keydown(function (e) {
+    var touche = e.which;
+    var avionY = parseInt($("#avion").css("top"));
+    var avionX = parseInt($("#avion").css("left"));
     switch (touche) {
-        case 90:
-            if (avion2Y >= 20) {
-                $("#avion2").animate({
-                    top: "-=25"
-                }, 200, "linear");
+        case 38:
+            if (avionY >= 20) {
+                $("#avion").css('top', "-=25px");
             }
             break;
-        case 83:
-            if (avion2Y < 550) {
-                $("#avion2").animate({
-                    top: "+=25"
-                }, 200, "linear");;
+        case 40:
+            if (avionY < 550) {
+                $("#avion").css('top', "+=25px");
             }
             break;
-        case 81:
-            if (avion2X > 20) {
-                $("#avion2").animate({
-                    left: "-=25"
-                }, 200, "linear");
+        case 37:
+            if (avionX > 20) {
+                $("#avion").css('left', "-=25px");
             }
             break;
-        case 68:
-            if (avion2X < 1350) {
-                $("#avion2").animate({
-                    left: "+=25"
-                }, 200, "linear");
+        case 39:
+            if (avionX < 1350) {
+                $("#avion").css('left', "+=25px");
             }
             break;
         case 32:
-            $("#avion2").attr("src", "images/virusInvincible.png");
+            $("#avion").attr("src","images/virusInvincible.png");
     }
 
 });
+
 var score2 = 1000;
 
 function lancerIntro2() {

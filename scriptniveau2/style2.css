@@ -15,6 +15,14 @@ progress[value] {
     width: 400px;
     height: 20px;
 }
+#zonedefin{
+    position:absolute;
+    top:0px;
+    right:0px;
+    z:999;
+    height:600px;
+    width:100px;
+}
 .projectile{
     height: 20px;
     width: 20px;

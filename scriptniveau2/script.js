@@ -6,6 +6,7 @@ var compteuri = 0;
 var chemin = window.location.pathname; //chemin reçoit le chemin de l'url, c'est-à-dire /article/1.
 var url = window.location.href; //la variable url reçoit l'URL courante, c'est-à-dire http://www.example.com/article/1.
 var ancienScore1 = url.split("=")[1];
+var i = 0;
 // Mouvement des joueurs
 $(document).keydown(function (e) {
     var touche = e.which;
@@ -49,10 +50,17 @@ function lancerIntro2(){
     rocket3();
     rocket4();
     setInterval(collision, 16);
+    setInterval(collisioncarre,16);
     decompte();
+    setInterval(togoal,16);
     carre();
+<<<<<<< Updated upstream
     setInterval(collisioncarre,16);
     setInterval(collisioncarre2,16);
+=======
+
+
+>>>>>>> Stashed changes
 }
 
 
@@ -62,9 +70,25 @@ $(document).ready(function () {
 });
 
 function btnTest(){
+<<<<<<< Updated upstream
     window.location.replace("index3.html?score1="+ancienScore1+"&score2="+score2);
+=======
+    lastsecondes();
+>>>>>>> Stashed changes
 }
-var i = 0;
+
+function togoal(){
+    var avionX = parseInt($("#avion").css("left"));
+    if (avionX > 1200
+        && test === true) {
+        console.log("togoal");
+        reussite();
+
+        test = false;
+    }
+
+}
+
 
 function compteur() {
     i++;
@@ -80,17 +104,28 @@ function decompte() {
     $("#timer").text(61 - compteuri);
 
     compteur2 = setTimeout(decompte, 1000);
-    $( "#progressbar" ).val(compteuri);
-
+    $("#progressbar").val(compteuri);
     if (compteuri == 50) {
+<<<<<<< Updated upstream
       $(".alert").css("display","block")
       carre2()
     } else if (compteuri == 61) {
       $(".alert").css("display","none")
     } else {
       return false
+=======
+        lastsecondes();
+>>>>>>> Stashed changes
     }
 }
+
+//Dernières secondes : affichage carré
+function lastsecondes(){
+    $(".alert").css("display","block");
+
+
+}
+
 // Pour le défilement du ciel
 function ciel() {
     $("#principale").animate({
@@ -140,6 +175,7 @@ function carre(){
 };
 
 
+<<<<<<< Updated upstream
 ///
 //CARRE
 function carre2(){
@@ -193,6 +229,8 @@ function callback_carre() {
     setTimeout(carre);
 }
 
+=======
+>>>>>>> Stashed changes
 //DROITE GAUCHE//
 function rocket(){
     $(".rocket").each(function(i) {
@@ -300,7 +338,7 @@ function rocket4(){
             top: "1200px"
         },4000,callback_rocket4)
     });
-};
+}
 
 function callback_rocket4() {
     $(".rocket4").each(function(i){
@@ -518,6 +556,7 @@ function changeetat(){
 }
 function fctmort(){
     console.log("mort");
+    $(".alert").css("display","none")
     $(".bruitage2").trigger('play');
     $("#avion").attr("src","images/virusMort.png").css({
         width: "70px"            });
@@ -525,13 +564,15 @@ function fctmort(){
 
 
     $("#conclusion").fadeIn(1000);
-
 }
+
 function reussite(){
-    console.log("mort");
+    $(".alert").css("display","none")
     etatVirus =10;
+    compteuri=-500;
     $("#wrapper").fadeOut(1000);
     $("#reussite").fadeIn(1000);
+
 
 }
 function relocal(){

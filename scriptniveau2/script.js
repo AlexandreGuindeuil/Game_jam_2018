@@ -78,9 +78,7 @@ function decompte() {
     console.log(compteuri);
     // $("#timer").text = 61 - compteuri;
     $("#timer").text(61 - compteuri);
-    if (compteuri == 61) {
-        reussite();
-    }
+    
     compteur2 = setTimeout(decompte, 1000);
     $( "#progressbar" ).val(compteuri);
 

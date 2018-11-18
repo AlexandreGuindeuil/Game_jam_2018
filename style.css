@@ -26,6 +26,10 @@ progress[value] {
   padding-left: 21%;
 }
 
+#conclusion, #reussite, #btntest {
+  padding-left: 20%; 
+}
+
 .projectile{
     height: 20px;
     width: 20px;

@@ -59,7 +59,13 @@ progress[value] {
     transition: 0.1s;
     width: 90px;
 }
-
+#avion2 {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    transition: 0.1s;
+    width: 90px;
+}
 .tailleP{
     width: 50px;
 }
@@ -103,7 +109,7 @@ progress[value] {
     top: 0px;
     color: red;
     font-size: 1.5em;
-;
+
 }
 
 .boom {

@@ -18,8 +18,8 @@ progress[value] {
 #zonedefin{
     position:absolute;
     top:0px;
-    right:0px;
-    z:999;
+    right:-50px;
+    z-index: :999;
     height:600px;
     width:100px;
 }

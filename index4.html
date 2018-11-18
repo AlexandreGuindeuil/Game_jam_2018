@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="scriptniveau4/style4.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="scriptniveau3/script.js"></script>
+
+</head>
+
+<body>
+<nav>
+
+</nav>
+
+<main>
+
+    <div id="intro2" onclick="lancerIntro2()">
+        <img src="images/ecranIntro.png" id="intro2" alt="Intro">
+    </div>
+    <div id="wrapper" style="display: none">
+        <div>
+            <span id="timer" style="text-align: center">0</span>
+
+        </div>
+        <progress id="progressbar" name="file" max="60" value="0">
+            70%
+        </progress>
+        <div id="principale">
+
+            <div id="nuage"></div>
+            <span id="info">0</span>
+            <img id="avion" src="images/virus.png" alt="avion">
+
+            <img class="vague" id="vague" src="images/carre.png" alt="rocket">
+            <img class="vague2" id="vague2" src="images/carre.png" alt="rocket">
+
+
+
+
+            <div id="son">
+                <audio class="bruitage" src="images/250.mp3"></audio>
+                <audio class="bruitage2" src="images/251.mp3"></audio>
+
+
+            </div>
+            <div class="boom"><img src="" alt=""></div>
+
+        </div>
+    </div>
+    <div id="conclusion" style="display:none"><img src="images/ecranFinPerdu.png" style="width:1200px"alt="">
+
+        <button onclick="relocal()">Recommencer ! </button></div>
+    <div id="reussite" style="display:none"><img src="images/ecranFinVictoire3.png" style="width:1200px"alt="">
+        <button onclick="niveaudeux()">Passez au niveau 3.</button></div>
+    <button id="btntest" onclick="btnTest()" >Test</button>
+    <div class="scoreboard-text">
+
+      <div class="scoreboard">
+        <h1>ScoreBoard : </h1>
+        <ul>
+          <li id="score1"></li>
+          <li id="score2"></li>
+          <li id="score3"></li>
+          <li id="score4"></li>
+        </ul>
+      </div>
+      <div class="alert">
+        <h2>Attention il ne te reste plus <br> que 10 secondes pour atteindre la cellule ! </h2>
+      </div>
+    </div>
+</main>
+
+</body>
+
+</html>

@@ -107,14 +107,82 @@ function decompte() {
       $(".alert").css("display","none")
     } else if (compteuri == 11) {
       carre3();
+      cellule1();
     } else if (compteuri == 20) {
       carre5();
+      cellule2();
     } else if (compteuri == 25) {
       carre6();
+      cellule3();
     } else if (compteuri == 27) {
       carre8();
+      cellule4();
+    } else if (compteuri == 30) {
+      carre8();
+      cellule5();
+    } else if (compteuri == 32) {
+      carre8();
+      cellule6();
     }
       };
+
+
+
+//cellule
+function cellule1(){
+
+var yc  = Math.floor((Math.random() * 390) + 10);
+var xc = Math.floor((Math.random() * 390) + 10);
+
+  $(".cellule").css({
+    top : yc+"px",
+    left : xc+"px"
+  })
+}
+function cellule1(){
+
+var yc  = Math.floor((Math.random() * 390) + 10);
+var xc = Math.floor((Math.random() * 390) + 10);
+
+  $(".cellule").css({
+    top : yc+"px",
+    left : xc+"px"
+  })
+}
+function cellule1(){
+
+var yc  = Math.floor((Math.random() * 390) + 10);
+var xc = Math.floor((Math.random() * 390) + 10);
+
+  $(".cellule").css({
+    top : yc+"px",
+    left : xc+"px"
+  })
+}
+function cellule1(){
+
+var yc  = Math.floor((Math.random() * 390) + 10);
+var xc = Math.floor((Math.random() * 390) + 10);
+
+  $(".cellule").css({
+    top : yc+"px",
+    left : xc+"px"
+  })
+}
+function cellule1(){
+
+var yc  = Math.floor((Math.random() * 390) + 10);
+var xc = Math.floor((Math.random() * 390) + 10);
+
+  $(".cellule").css({
+    top : yc+"px",
+    left : xc+"px"
+  })
+}
+
+//
+
+
 //déclanchement de tout les carrés
 function carre8(){
   $(".vague8").animate({

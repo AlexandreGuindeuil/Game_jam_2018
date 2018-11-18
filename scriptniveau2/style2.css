@@ -72,13 +72,15 @@ progress[value] {
 }
 
 .vague {
-    /*width:100px,*/
-    /*height:100px*/
+    width:200px;
+    height:200px;
     position: absolute;
     top: 0px;
     left: 900px;
 }
 .vague2{
+    width:200px;
+    height:200px;
   position: absolute;
   top: -200px;
   left: 100px;

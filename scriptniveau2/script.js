@@ -154,7 +154,7 @@ function carre(){
     console.log("carre");
 
     var y = Math.floor((Math.random() * 390) + 10);
-    $(".vague").css({
+    $(".vague").css({ 
         left: "1400px",
         top:"0px"
     })

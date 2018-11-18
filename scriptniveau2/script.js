@@ -85,6 +85,7 @@ function decompte() {
 
     if (compteuri == 50) {
       $(".alert").css("display","block")
+      carre2()
     } else if (compteuri == 61) {
       $(".alert").css("display","none")
     } else {
@@ -136,6 +137,48 @@ function carre(){
       left: "-200px",
       top : "-200px"
     },6000)
+
+};
+
+
+///
+//CARRE
+function carre2(){
+    console.log("carre2");
+
+    var y = Math.floor((Math.random() * 390) + 10);
+    $(".vague2").css({
+        left: "100px",
+        top:"-200px"
+    })
+    $(".vague2").animate({
+        left: "100px",
+        top : "700px"
+    }, 2000).animate({
+      left: "400px",
+      top : "700px"
+    },2000).animate({
+      left: "400px",
+      top : "-200px"
+    },2000).animate({
+      left: "600px",
+      top : "-200px"
+    },2000).animate({
+      left: "600px",
+      top : "700px"
+    },2000).animate({
+      left: "800px",
+      top : "700px"
+    },2000).animate({
+      left: "800px",
+      top : "-200px"
+    },2000).animate({
+      left: "1200px",
+      top : "-200px"
+    },2000).animate({
+      left: "1200px",
+      top : "7000px"
+    },2000)
 
 };
 

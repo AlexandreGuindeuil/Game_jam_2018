@@ -540,5 +540,5 @@ function relocal(){
     location.reload();
 }
 function niveaudeux(){
-    window.location.replace("index2.html");
+    window.location.replace("index3.html?score1="+ancienScore1+"&score2="+score2);
 }

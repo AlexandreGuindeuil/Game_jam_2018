@@ -82,6 +82,14 @@ function decompte() {
     }
     compteur2 = setTimeout(decompte, 1000);
     $( "#progressbar" ).val(compteuri);
+
+    if (compteuri == 50) {
+      $(".alert").css("display","block")
+    } else if (compteuri == 61) {
+      $(".alert").css("display","none")
+    } else {
+      return false
+    }
 }
 // Pour le défilement du ciel
 function ciel() {
@@ -91,6 +99,14 @@ function ciel() {
         40000,
         "linear", ciel);
 }
+//////////////
+//TEXT ALERT//
+//////////////
+
+window.setInterval(function(){
+  $(".alert").toggleClass("red")
+},500);
+
 /////////////////
 // LES MOUVEMENTS DES PROJECTILES
 /////////////////

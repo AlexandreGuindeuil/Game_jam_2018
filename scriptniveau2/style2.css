@@ -1,5 +1,7 @@
 body {
-    width: 1500px;
+    width: 1200px;
+    margin: 0 auto;
+
 }
 
 nav {
@@ -13,19 +15,6 @@ progress[value] {
     width: 400px;
     height: 20px;
 }
-
-#intro {
-  padding-left: 30%;
-}
-
-#intro2 {
-  padding-left: 17%;
-}
-
-#wrapper {
-  padding-left: ;
-}
-
 .projectile{
     height: 20px;
     width: 20px;
@@ -34,29 +23,28 @@ progress[value] {
     position: relative;
     margin: 0 auto;
     height: 600px;
-    width: 1000px;
+    width: 1400px;
+    border: 1px solid blue;
     overflow: hidden;
-    background-image: url(images/fond.png);
+    background-image: url(../images/fond2.png);
     background-size:auto;
 }
 
 #accueil {
-  height: 600px;
+    height: 600px;
 }
 
 #intro2 {
-  height: 600px;
+    height: 600px;
 }
-
 
 #progress{
-  background-color: white;
+    background-color: white;
 
-  border: 15px solid black;
-  height: 45px;
-  border-radius: 2px;
+    border: 15px solid black;
+    height: 45px;
+    border-radius: 2px;
 }
-
 #nuage {
     min-height: 400px;
     width: 1000px;
@@ -72,12 +60,20 @@ progress[value] {
 }
 
 .tailleP{
-  width: 50px;
+    width: 50px;
+}
+
+.vague {
+    /*width:100px,*/
+    /*height:100px*/
+    position: absolute;
+    top: 0px;
+    left: 900px;
 }
 .rocket {
     position: absolute;
     top: 0px;
-    left: 1200px;
+    left: 1500px;
 }
 .rocket3 {
     position: absolute;
@@ -101,7 +97,7 @@ progress[value] {
     top: 0px;
     color: red;
     font-size: 1.5em;
-    ;
+;
 }
 
 .boom {
@@ -122,6 +118,22 @@ progress[value] {
  font-weight: bold;
  color: white;
  font-family: Verdana;
+}
+.scoreboard-text{
+  display: flex;
+  flex-flow: row wrap;
+}
+.alert{
+  font-size: 18pt
+  color :black;
+  font-family: verdana;
+  transition: color .3s;
+  margin-left: 20px;
+  display: none;
+}
+.red{
+  color: red;
+  transition: color .3s;
 }
 .scoreboard {
   border : 1px solid indianred;

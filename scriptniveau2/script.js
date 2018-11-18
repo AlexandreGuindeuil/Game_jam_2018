@@ -54,13 +54,13 @@ function lancerIntro2(){
     decompte();
     setInterval(togoal,16);
     carre();
-<<<<<<< Updated upstream
+
     setInterval(collisioncarre,16);
     setInterval(collisioncarre2,16);
-=======
 
 
->>>>>>> Stashed changes
+
+
 }
 
 
@@ -70,11 +70,11 @@ $(document).ready(function () {
 });
 
 function btnTest(){
-<<<<<<< Updated upstream
+
     window.location.replace("index3.html?score1="+ancienScore1+"&score2="+score2);
-=======
+
     lastsecondes();
->>>>>>> Stashed changes
+
 }
 
 function togoal(){
@@ -106,16 +106,16 @@ function decompte() {
     compteur2 = setTimeout(decompte, 1000);
     $("#progressbar").val(compteuri);
     if (compteuri == 50) {
-<<<<<<< Updated upstream
+
       $(".alert").css("display","block")
       carre2()
     } else if (compteuri == 61) {
       $(".alert").css("display","none")
     } else {
       return false
-=======
+
         lastsecondes();
->>>>>>> Stashed changes
+
     }
 }
 
@@ -175,7 +175,7 @@ function carre(){
 };
 
 
-<<<<<<< Updated upstream
+
 ///
 //CARRE
 function carre2(){
@@ -229,8 +229,8 @@ function callback_carre() {
     setTimeout(carre);
 }
 
-=======
->>>>>>> Stashed changes
+
+
 //DROITE GAUCHE//
 function rocket(){
     $(".rocket").each(function(i) {

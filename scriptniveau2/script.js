@@ -544,7 +544,7 @@ function fctmort(){
     $(".bruitage2").trigger('play');
     $("#avion").attr("src","images/virusMort.png").css({
         width: "70px"            });
-    $("#wrapper").fadeOut(3000);
+    $("#wrapper").hide();
 
 
     $("#conclusion").fadeIn(1000);

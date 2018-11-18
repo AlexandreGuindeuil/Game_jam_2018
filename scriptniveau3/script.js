@@ -8,9 +8,7 @@ var compteur;
 var compteuri = 0;
 var chemin = window.location.pathname; //chemin reçoit le chemin de l'url, c'est-à-dire /article/1.
 var url = window.location.href; //la variable url reçoit l'URL courante, c'est-à-dire http://www.example.com/article/1.
-var machin = url.split("=")[1];
-var ancienScore1 = machin.split("&")[0];
-var ancienScore2 = url.split("=")[2];
+
 var nbmort = 0;
 var quelvirus;
 // Mouvement des joueurs
@@ -45,33 +43,33 @@ $(document).keydown(function (e) {
 
 });
 
-$(document).keydown(function (e) {
-    var touche = e.which;
+$(document).keydown(function (event) {
+    var touche = event.which;
     var avionY = parseInt($("#avion").css("top"));
     var avionX = parseInt($("#avion").css("left"));
     switch (touche) {
-        case 38:
+        case 83:
             if (avionY >= 20) {
-                $("#avion").css('top', "-=25px");
+                $("#avion2").css('top', "-=25px");
             }
             break;
-        case 40:
+        case 90:
             if (avionY < 550) {
-                $("#avion").css('top', "+=25px");
+                $("#avion2").css('top', "+=25px");
             }
             break;
-        case 37:
+        case 81:
             if (avionX > 20) {
-                $("#avion").css('left', "-=25px");
+                $("#avion2").css('left', "-=25px");
             }
             break;
-        case 39:
+        case 68:
             if (avionX < 1350) {
-                $("#avion").css('left', "+=25px");
+                $("#avion2").css('left', "+=25px");
             }
             break;
         case 32:
-            $("#avion").attr("src","images/virusInvincible.png");
+            $("#avion2").attr("src","images/virusInvincible.png");
     }
 
 });
@@ -81,8 +79,8 @@ var score2 = 1000;
 function lancerIntro2() {
     $("#intro2").hide();
     $("#wrapper").fadeIn(1000);
-    $("#score2").text("Niveau 2: " + ancienScore2 + " Points")
-    $("#score1").text("Niveau 1: " + ancienScore1 + " Points")
+    // $("#score2").text("Niveau 2: " + ancienScore2 + " Points")
+    // $("#score1").text("Niveau 1: " + ancienScore1 + " Points")
     ciel();
     rocket();
     rocket2();

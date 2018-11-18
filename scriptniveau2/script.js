@@ -57,10 +57,14 @@ function lancerIntro2(){
 
     setInterval(collisioncarre,16);
     setInterval(collisioncarre2,16);
+<<<<<<< Updated upstream
 
 
 
 
+=======
+
+>>>>>>> Stashed changes
 }
 
 
@@ -71,10 +75,16 @@ $(document).ready(function () {
 
 function btnTest(){
 
+<<<<<<< Updated upstream
     window.location.replace("index3.html?score1="+ancienScore1+"&score2="+score2);
 
     lastsecondes();
 
+=======
+    lastsecondes();
+
+
+>>>>>>> Stashed changes
 }
 
 function togoal(){
@@ -107,6 +117,7 @@ function decompte() {
     $("#progressbar").val(compteuri);
     if (compteuri == 50) {
 
+<<<<<<< Updated upstream
       $(".alert").css("display","block")
       carre2()
     } else if (compteuri == 61) {
@@ -116,12 +127,16 @@ function decompte() {
 
         lastsecondes();
 
+=======
+        lastsecondes();
+>>>>>>> Stashed changes
     }
 }
 
 //Dernières secondes : affichage carré
 function lastsecondes(){
     $(".alert").css("display","block");
+    $("#zonedefin").fadeIn(1000);
 
 
 }
@@ -229,8 +244,11 @@ function callback_carre() {
     setTimeout(carre);
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 //DROITE GAUCHE//
 function rocket(){
     $(".rocket").each(function(i) {

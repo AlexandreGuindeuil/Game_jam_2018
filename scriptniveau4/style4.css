@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream:scriptniveau3/style3.css
 body {
     width: 1200px;
     margin: 0 auto;
@@ -15,6 +14,14 @@ progress[value] {
     margin-left :350px;
     width: 400px;
     height: 20px;
+}
+#zonedefin{
+    position:absolute;
+    top:0px;
+    right:-50px;
+    z-index: :999;
+    height:600px;
+    width:100px;
 }
 .projectile{
     height: 20px;
@@ -59,28 +66,65 @@ progress[value] {
     transition: 0.1s;
     width: 90px;
 }
-#avion2 {
-    position: absolute;
-    left: 200px;
-    top: 350px;
-    transition: 0.1s;
-    width: 90px;
-}
+
 .tailleP{
     width: 50px;
 }
 
 .vague {
-    /*width:100px,*/
-    /*height:100px*/
+    width:200px;
+    height:200px;
     position: absolute;
     top: 0px;
     left: 900px;
 }
 .vague2{
+    width:200px;
+    height:200px;
   position: absolute;
   top: -200px;
   left: 100px;
+}
+.vague3{
+    width:200px;
+    height:200px;
+  position: absolute;
+  top: -200px;
+  left: 1100px;
+}
+.vague4{
+    width:200px;
+    height:200px;
+  position: absolute;
+  top: -200px;
+  left: 100px;
+}
+.vague5{
+  width:200px;
+  height:200px;
+  position: absolute;
+  top: 200px;
+  left: -200px;
+}
+.vague6{
+  width:200px;
+  height:200px;
+  position: absolute;
+  top: 400px;
+  left: -200px;
+}
+.vague7{
+  width:200px;
+  height:200px;
+  position: absolute;
+  top: 50px;
+  left: 1400px;
+}.vague8{
+  width:200px;
+  height:200px;
+  position: absolute;
+  top: 150px;
+  left: -200px;
 }
 .rocket {
     position: absolute;
@@ -109,7 +153,7 @@ progress[value] {
     top: 0px;
     color: red;
     font-size: 1.5em;
-
+;
 }
 
 .boom {
@@ -158,143 +202,3 @@ progress[value] {
 body{
   background-color: #262626;
 }
-=======
-body {
-    width: 1200px;
-    margin: 0 auto;
-
-}
-
-nav {
-    min-height: 100px;
-}
-progress[value] {
-    -webkit-appearance: none;
-    appearance: none;
-
-    margin-left :350px;
-    width: 400px;
-    height: 20px;
-}
-.projectile{
-    height: 20px;
-    width: 20px;
-}
-#principale {
-    position: relative;
-    margin: 0 auto;
-    height: 600px;
-    width: 1400px;
-    border: 1px solid blue;
-    overflow: hidden;
-    background-image: url(../images/fond2.png);
-    background-size:auto;
-}
-
-#accueil {
-    height: 600px;
-}
-
-#intro2 {
-    height: 600px;
-}
-
-#progress{
-    background-color: white;
-
-    border: 15px solid black;
-    height: 45px;
-    border-radius: 2px;
-}
-#nuage {
-    min-height: 400px;
-    width: 1000px;
-    position: absolute;
-}
-
-#avion {
-    position: absolute;
-    left: 200px;
-    top: 250px;
-    transition: 0.1s;
-    width: 90px;
-}
-
-.tailleP{
-    width: 50px;
-}
-
-#vague {
-    /*width:100px,*/
-    /*height:100px*/
-    position: absolute;
-    top: 0px;
-    left: 1400px;
-}
-.rocket {
-    position: absolute;
-    top: 0px;
-    left: 1200px;
-}
-.rocket3 {
-    position: absolute;
-    top: 0px;
-    left: 1200px;
-}
-.rocket2 {
-    position: absolute;
-    top: 0px;
-    left: 1200px;
-}
-.rocket4 {
-    position: absolute;
-    top: 0px;
-    left: 500px;
-}
-#zonedefin{
-    position:absolute;
-    top:0px;
-    right:600px;
-    z:999;
-}
-
-#info {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    color: red;
-    font-size: 1.5em;
-;
-}
-
-.boom {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-}
-.scoreboard h1{
-  font-size: 18pt;
-  font-family: Verdana;
-  padding-left: 10px;
-  border-bottom: 1px solid indianred;
-  padding-bottom: 15px;
-}
-.scoreboard li{
-  list-style: none;
-  font-size: 18pt;
- font-weight: bold;
- color: white;
- font-family: Verdana;
-}
-.scoreboard {
-  border : 1px solid indianred;
- width: 400px;
-}
-.structure{
-  display: flex;
-  flex-flow: row wrap;
-}
-body{
-  background-color: #262626;
-}
->>>>>>> Stashed changes:scriptniveau2/style.css

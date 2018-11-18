@@ -3,9 +3,9 @@ var test = true;
 var etatVirus = 0;
 var compteur;
 var compteuri = 0;
-var chemin = window.location.pathname; //chemin reçoit le chemin de l'url, c'est-à-dire /article/1.
-var url = window.location.href; //la variable url reçoit l'URL courante, c'est-à-dire http://www.example.com/article/1.
-var ancienScore1 = url.split("=")[1];
+// var chemin = window.location.pathname; //chemin reçoit le chemin de l'url, c'est-à-dire /article/1.
+// var url = window.location.href; //la variable url reçoit l'URL courante, c'est-à-dire http://www.example.com/article/1.
+// var ancienScore1 = url.split("=")[1];
 var i = 0;
 // Mouvement des joueurs
 $(document).keydown(function (e) {
@@ -42,8 +42,8 @@ var score2 = 1000;
 function lancerIntro2(){
     $("#intro2").hide();
     $("#wrapper").fadeIn(1000);
-    $("#score2").text("Niveau 2: "+score2+" Points")
-    $("#score1").text("Niveau 1: "+ancienScore1+" Points")
+    // $("#score2").text("Niveau 2: "+score2+" Points")
+    // $("#score1").text("Niveau 1: "+ancienScore1+" Points")
     ciel();
     // rocket();
     // rocket2();
@@ -54,7 +54,6 @@ function lancerIntro2(){
     decompte();
     setInterval(togoal,16);
     carre();
-
     setInterval(collisioncarre,16);
     setInterval(collisioncarre2,16);
 
@@ -83,7 +82,7 @@ function togoal(){
     }
 
 }
-
+i == 11
 
 function compteur() {
     i++;
@@ -103,14 +102,62 @@ function decompte() {
     if (compteuri == 50) {
 
       lastsecondes();
-      carre2()
+      carre2();
     } else if (compteuri == 61) {
       $(".alert").css("display","none")
-    } else {
-      return false
-
-
+    } else if (compteuri == 11) {
+      carre3();
+    } else if (compteuri == 20) {
+      carre5();
+    } else if (compteuri == 25) {
+      carre6();
+    } else if (compteuri == 27) {
+      carre8();
     }
+      };
+//déclanchement de tout les carrés
+function carre8(){
+  $(".vague8").animate({
+    left : "1500px"
+  },3000).animate({
+    left : "-200px"
+  },3000)
+}
+function carre6(){
+  $(".vague6").animate({
+    left : "1500px"
+  },2500).animate({
+    left : "-200px"
+  },2500)
+  $(".vague7").animate({
+    left : "-200px"
+  },2500).animate({
+    left : "1500px"
+  },2500)
+}
+function carre5(){
+  $(".vague5").animate({
+    left : "1500px"
+  },1000)
+}
+function carre3(){
+
+
+  $(".vague3").animate({
+      left: "1200px",
+      top : "900px"
+  }, 3000).animate({
+    left: "1200px",
+    top : "-200px"
+  },3000)
+  $(".vague4").delay(600).animate({
+      left: "200px",
+      top : "900px"
+  }, 3000).animate({
+    left: "200px",
+    top : "-200px"
+  },3000)
+  console.log("test")
 }
 
 //Dernières secondes : affichage carré
@@ -224,131 +271,6 @@ function callback_carre() {
     test = true;
     setTimeout(carre);
 }
-
-
-//DROITE GAUCHE//
-function rocket(){
-    $(".rocket").each(function(i) {
-        var y = Math.floor((Math.random() * 1000) + 10);
-        $(this).css({
-            left: "1500px"
-        })
-        $(this).delay(800).animate({
-            left: "-200px",
-            top: y
-        },5800,callback_rocket)
-    });
-}
-function callback_rocket() {
-    $(".rocket").each(function(i){
-        var y2 = Math.floor((Math.random() * 390) + 10);
-        $(this).css({
-            left: "1200px",
-            top: y2
-        });
-        test = true;
-        setTimeout(rocket);
-
-    })
-}
-
-// GAUCHE DROITE //
-function rocket2(){
-    $(".rocket2").each(function(i){
-
-        $(this).css({
-            left:"-200px",
-            top :"120px"
-        })
-
-        var y = Math.floor((Math.random() * 700) + 10);
-
-        $(this).delay(800).animate({
-            left: "1600px",
-            top: y
-        },10000,callback_rocket2)
-    });
-};
-function callback_rocket2() {
-    console.log("test")
-    $(".rocket2").each(function(i){
-        var y2 = Math.floor((Math.random() * 700) + 10);
-        $(this).css({
-            left: "-100px",
-            top: y2
-        });
-        test = true;
-        setTimeout(rocket2);
-
-    })
-}
-
-// HAUT BAS //
-function rocket3(){
-    //console.log("bonjour")
-    $(".rocket3").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) + 10);
-        $(this).css({
-            top :"-100px",
-            left: y3
-        })
-
-        var y3 = Math.floor((Math.random() * 390) + 10);
-
-        $(this).delay(300).animate({
-            left: y3,
-            top: "1200px"
-        },5000,callback_rocket3)
-    });
-};
-
-function callback_rocket3() {
-    console.log("bonjour2")
-    $(".rocket3").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) + 10);
-        $(this).css({
-            left: y3,
-            top: "-100px"
-        });
-        test = true;
-        setTimeout(rocket3);
-
-    })
-}
-
-// HAUT BAS 2 //
-function rocket4(){
-    console.log("rocket4");
-    $(".rocket4").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) +600);
-        $(this).css({
-            top :"-150px",
-            left: y3
-        })
-
-        var y3 = Math.floor((Math.random() * 900) + 10);
-
-        $(this).delay(300).animate({
-            left: y3,
-            top: "1200px"
-        },4000,callback_rocket4)
-    });
-}
-
-function callback_rocket4() {
-    $(".rocket4").each(function(i){
-        var y3 = Math.floor((Math.random() * 390) + 600);
-        $(this).css({
-            left: y3,
-            top: "-200px"
-        });
-        test = true;
-        setTimeout(rocket4);
-
-    })
-}
-
-
 
 
 function bruitage() {

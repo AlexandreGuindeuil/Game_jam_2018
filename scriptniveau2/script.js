@@ -63,7 +63,6 @@ function lancerIntro2(){
     decompte();
     setInterval(togoal,16);
     carre();
-
     setInterval(collisioncarre,16);
     setInterval(collisioncarre2,16);
 
@@ -180,8 +179,9 @@ function carre(){
 
 
 
-///
-//CARRE
+/////////
+//CARRE//
+/////////
 function carre2(){
     console.log("carre2");
 

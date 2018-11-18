@@ -21,22 +21,31 @@ $(document).keydown(function (e) {
     switch (touche) {
         case 38:
             if (avionY >= 20) {
-                $("#avion").css('top', "-=25px");
+                // $("#avion").css('top', "-=25px");
+                $("#avion").animate({
+                    top: "-=25"
+                }, 200, "linear")
             }
             break;
         case 40:
             if (avionY < 550) {
-                $("#avion").css('top', "+=25px");
+                $("#avion").animate({
+                    top: "+=25"
+                }, 200, "linear");
             }
             break;
         case 37:
             if (avionX > 20) {
-                $("#avion").css('left', "-=25px");
+                $("#avion").animate({
+                    left: "-=25"
+                }, 200, "linear");
             }
             break;
         case 39:
             if (avionX < 1350) {
-                $("#avion").css('left', "+=25px");
+                $("#avion").animate({
+                    left: "+=25"
+                }, 200, "linear");
             }
             break;
         case 32:
@@ -52,22 +61,30 @@ $(document).keydown(function (event) {
     switch (touche) {
         case 90:
             if (avion2Y >= 20) {
-                $("#avion2").css('top', "-=25px");
+                $("#avion2").animate({
+                    top: "-=25"
+                }, 200, "linear");
             }
             break;
         case 83:
             if (avion2Y < 550) {
-                $("#avion2").css('top', "+=25px");
+                $("#avion2").animate({
+                    top: "+=25"
+                }, 200, "linear");;
             }
             break;
         case 81:
             if (avion2X > 20) {
-                $("#avion2").css('left', "-=25px");
+                $("#avion2").animate({
+                    left: "-=25"
+                }, 200, "linear");
             }
             break;
         case 68:
             if (avion2X < 1350) {
-                $("#avion2").css('left', "+=25px");
+                $("#avion2").animate({
+                    left: "+=25"
+                }, 200, "linear");
             }
             break;
         case 32:
@@ -91,7 +108,6 @@ function lancerIntro2() {
     decompte();
     carre();
     setInterval(collisioncarre, 16);
-    setInterval(collisioncarre2, 16);
 }
 
 
@@ -169,45 +185,6 @@ function carre() {
 
 };
 
-
-///
-//CARRE
-function carre2() {
-    var y = Math.floor((Math.random() * 390) + 10);
-    $(".vague2").css({
-        left: "100px",
-        top: "-200px"
-    })
-    $(".vague2").animate({
-        left: "100px",
-        top: "700px"
-    }, 2000).animate({
-        left: "400px",
-        top: "700px"
-    }, 2000).animate({
-        left: "400px",
-        top: "-200px"
-    }, 2000).animate({
-        left: "600px",
-        top: "-200px"
-    }, 2000).animate({
-        left: "600px",
-        top: "700px"
-    }, 2000).animate({
-        left: "800px",
-        top: "700px"
-    }, 2000).animate({
-        left: "800px",
-        top: "-200px"
-    }, 2000).animate({
-        left: "1200px",
-        top: "-200px"
-    }, 2000).animate({
-        left: "1200px",
-        top: "7000px"
-    }, 2000)
-
-};
 
 
 ///
@@ -470,54 +447,6 @@ function collisioncarre() {
         fctmort(2);
         test = false;
     }
-
-
-};
-
-////colision carré 2
-function collisioncarre2() {
-    //console.log("carre");
-    var avionY = parseInt($("#avion").css("top"));
-    var avionX = parseInt($("#avion").css("left"));
-    var rocketY = parseInt($("#vague2").css("top"));
-    var rocketX = parseInt($("#vague2").css("left"));
-
-    rocketX = rocketX - 20;
-    // console.log("avionY" + avionY);
-    //    console.log("avionX" + avionX);
-    //    console.log("rocketY" + rocketY);
-    //    console.log("rocketX" + rocketX);
-
-    var rectavion = {
-        x: avionX,
-        y: avionY,
-        width: 50,
-        height: 50
-    }
-    var rectmissile = {
-        x: rocketX,
-        y: rocketY,
-        width: 120,
-        height: 120
-    }
-    // console.log(rectmissile.x);
-    // console.log(rectmissile.y);
-
-    if (rectavion.x < rectmissile.x + rectmissile.width &&
-        rectavion.x + rectavion.width > rectmissile.x &&
-        rectavion.y < rectmissile.y + rectmissile.height &&
-        rectavion.height + rectavion.y > rectmissile.y && test === true) {
-        console.log("collision");
-        fctmort();
-        test = false;
-        compteur();
-        changeetat();
-        bruitage();
-        boom();
-
-    }
-
-
 };
 
 
@@ -572,7 +501,7 @@ function changeetat(quelvirus) {
     }
     else if(quelvirus == 2){
         etatVirus2++;
-        console.log("etat virus 1 : " + etatVirus2);
+        console.log("etat virus 2 : " + etatVirus2);
         switch (etatVirus2) {
             case 1:
                 $("#avion2").attr("src", "images/degat1.png").css({
@@ -627,14 +556,20 @@ function fctmort(quelavion) {
         console.log("mort virus un");
         $("#avion").attr("src", "images/virusMort.png").css({
             width: "70px"
-        }).fadeOut(500);
+        }).fadeOut(500).css({
+            top:"-10000",
+            left:"-10000"
+        });
         mortun = true;
     }
     else if (quelavion == 2) {
         console.log("mort virus deux");
         $("#avion2").attr("src", "images/virusMort.png").css({
             width: "70px"
-        }).fadeOut(500);
+        }).fadeOut(500).css({
+            top:"-10000",
+            left:"-10000"
+        });
         mortdeux = true;
     }
 

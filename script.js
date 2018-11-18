@@ -13,26 +13,35 @@ $(document).keydown(function (e) {
     switch (touche) {
         case 38:
             if (avionY >= 20) {
-                $("#avion").css('top', "-=25px");
+                // $("#avion").css('top', "-=25px");
+                $("#avion").animate({
+                    top: "-=25"
+                }, 200, "linear")
             }
             break;
         case 40:
             if (avionY < 550) {
-                $("#avion").css('top', "+=25px");
+                $("#avion").animate({
+                    top: "+=25"
+                }, 200, "linear");
             }
             break;
         case 37:
             if (avionX > 20) {
-                $("#avion").css('left', "-=25px");
+                $("#avion").animate({
+                    left: "-=25"
+                }, 200, "linear");
             }
             break;
         case 39:
-            if (avionX < 980) {
-                $("#avion").css('left', "+=25px");
+            if (avionX < 1350) {
+                $("#avion").animate({
+                    left: "+=25"
+                }, 200, "linear");
             }
             break;
         case 32:
-            $("#avion").attr("src","images/virusInvincible.png");
+            $("#avion").attr("src", "images/virusInvincible.png");
     }
 
 });

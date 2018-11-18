@@ -52,6 +52,7 @@ function lancerIntro2(){
     decompte();
     carre();
     setInterval(collisioncarre,16);
+    setInterval(collisioncarre2,16);
 }
 
 
@@ -422,8 +423,55 @@ function collisioncarre() {
 
 
 };
+////colision carré 2
+function collisioncarre2() {
+    //console.log("carre");
+            var avionY = parseInt($("#avion").css("top"));
+            var avionX = parseInt($("#avion").css("left"));
+            var rocketY = parseInt($("#vague2").css("top"));
+            var rocketX = parseInt($("#vague2").css("left"));
+
+            rocketX = rocketX - 20;
+             // console.log("avionY" + avionY);
+             //    console.log("avionX" + avionX);
+             //    console.log("rocketY" + rocketY);
+             //    console.log("rocketX" + rocketX);
+
+            var rectavion = {
+                x: avionX,
+                y: avionY,
+                width: 50,
+                height: 50
+            }
+            var rectmissile = {
+                x: rocketX,
+                y: rocketY,
+                width: 100,
+                height: 100
+            }
+    // console.log(rectmissile.x);
+    // console.log(rectmissile.y);
+
+            if (rectavion.x < rectmissile.x + rectmissile.width &&
+                rectavion.x + rectavion.width > rectmissile.x &&
+                rectavion.y < rectmissile.y + rectmissile.height &&
+                rectavion.height + rectavion.y > rectmissile.y && test === true) {
+                console.log("collision");
+                fctmort();
+                test = false;
+                compteur();
+                changeetat();
+                bruitage();
+                boom();
+                test = false;
+            }
 
 
+};
+
+
+
+///
 function changeetat(){
 
     console.log("testchange");

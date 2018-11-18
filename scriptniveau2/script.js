@@ -15,35 +15,26 @@ $(document).keydown(function (e) {
     switch (touche) {
         case 38:
             if (avionY >= 20) {
-                // $("#avion").css('top', "-=25px");
-                $("#avion").animate({
-                    top: "-=25"
-                }, 200, "linear")
+                $("#avion").css('top', "-=25px");
             }
             break;
         case 40:
             if (avionY < 550) {
-                $("#avion").animate({
-                    top: "+=25"
-                }, 200, "linear");
+                $("#avion").css('top', "+=25px");
             }
             break;
         case 37:
             if (avionX > 20) {
-                $("#avion").animate({
-                    left: "-=25"
-                }, 200, "linear");
+                $("#avion").css('left', "-=25px");
             }
             break;
         case 39:
             if (avionX < 1350) {
-                $("#avion").animate({
-                    left: "+=25"
-                }, 200, "linear");
+                $("#avion").css('left', "+=25px");
             }
             break;
         case 32:
-            $("#avion").attr("src", "images/virusInvincible.png");
+            $("#avion").attr("src","images/virusInvincible.png");
     }
 
 });
@@ -154,7 +145,7 @@ function carre(){
     console.log("carre");
 
     var y = Math.floor((Math.random() * 390) + 10);
-    $(".vague").css({ 
+    $(".vague").css({
         left: "1400px",
         top:"0px"
     })
